@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD32EF0D18EDFD30001C0F46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD32EF0C18EDFD30001C0F46 /* Foundation.framework */; };
+		BD32EF0F18EDFD30001C0F46 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD32EF0E18EDFD30001C0F46 /* CoreGraphics.framework */; };
+		BD32EF1118EDFD30001C0F46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD32EF1018EDFD30001C0F46 /* UIKit.framework */; };
+		BD32EF1718EDFD30001C0F46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD32EF1518EDFD30001C0F46 /* InfoPlist.strings */; };
+		BD32EF1918EDFD30001C0F46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EF1818EDFD30001C0F46 /* main.m */; };
+		BD32EF1D18EDFD30001C0F46 /* ALOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EF1C18EDFD30001C0F46 /* ALOAppDelegate.m */; };
+		BD32EF2018EDFD30001C0F46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD32EF1E18EDFD30001C0F46 /* Main.storyboard */; };
+		BD32EF2318EDFD30001C0F46 /* ALOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EF2218EDFD30001C0F46 /* ALOViewController.m */; };
+		BD32EF2518EDFD30001C0F46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD32EF2418EDFD30001C0F46 /* Images.xcassets */; };
+		BD32EF2C18EDFD30001C0F46 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD32EF2B18EDFD30001C0F46 /* XCTest.framework */; };
+		BD32EF2D18EDFD30001C0F46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD32EF0C18EDFD30001C0F46 /* Foundation.framework */; };
+		BD32EF2E18EDFD30001C0F46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD32EF1018EDFD30001C0F46 /* UIKit.framework */; };
+		BD32EF3618EDFD30001C0F46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD32EF3418EDFD30001C0F46 /* InfoPlist.strings */; };
+		BD32EF3818EDFD30001C0F46 /* ALOTableFormsManagerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EF3718EDFD30001C0F46 /* ALOTableFormsManagerExampleTests.m */; };
+		BD32EF4418EDFF13001C0F46 /* ALOTableFormsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EF4318EDFF13001C0F46 /* ALOTableFormsManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD32EF2F18EDFD30001C0F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD32EF0118EDFD30001C0F46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD32EF0818EDFD30001C0F46;
+			remoteInfo = ALOTableFormsManagerExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD32EF0918EDFD30001C0F46 /* ALOTableFormsManagerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALOTableFormsManagerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD32EF0C18EDFD30001C0F46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BD32EF0E18EDFD30001C0F46 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BD32EF1018EDFD30001C0F46 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BD32EF1418EDFD30001C0F46 /* ALOTableFormsManagerExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ALOTableFormsManagerExample-Info.plist"; sourceTree = "<group>"; };
+		BD32EF1618EDFD30001C0F46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BD32EF1818EDFD30001C0F46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BD32EF1A18EDFD30001C0F46 /* ALOTableFormsManagerExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ALOTableFormsManagerExample-Prefix.pch"; sourceTree = "<group>"; };
+		BD32EF1B18EDFD30001C0F46 /* ALOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALOAppDelegate.h; sourceTree = "<group>"; };
+		BD32EF1C18EDFD30001C0F46 /* ALOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALOAppDelegate.m; sourceTree = "<group>"; };
+		BD32EF1F18EDFD30001C0F46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD32EF2118EDFD30001C0F46 /* ALOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALOViewController.h; sourceTree = "<group>"; };
+		BD32EF2218EDFD30001C0F46 /* ALOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALOViewController.m; sourceTree = "<group>"; };
+		BD32EF2418EDFD30001C0F46 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BD32EF2A18EDFD30001C0F46 /* ALOTableFormsManagerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALOTableFormsManagerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD32EF2B18EDFD30001C0F46 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BD32EF3318EDFD30001C0F46 /* ALOTableFormsManagerExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ALOTableFormsManagerExampleTests-Info.plist"; sourceTree = "<group>"; };
+		BD32EF3518EDFD30001C0F46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BD32EF3718EDFD30001C0F46 /* ALOTableFormsManagerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALOTableFormsManagerExampleTests.m; sourceTree = "<group>"; };
+		BD32EF4218EDFF13001C0F46 /* ALOTableFormsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALOTableFormsManager.h; path = ALOTableFormsManager/ALOTableFormsManager.h; sourceTree = "<group>"; };
+		BD32EF4318EDFF13001C0F46 /* ALOTableFormsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALOTableFormsManager.m; path = ALOTableFormsManager/ALOTableFormsManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD32EF0618EDFD30001C0F46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD32EF0F18EDFD30001C0F46 /* CoreGraphics.framework in Frameworks */,
+				BD32EF1118EDFD30001C0F46 /* UIKit.framework in Frameworks */,
+				BD32EF0D18EDFD30001C0F46 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD32EF2718EDFD30001C0F46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD32EF2C18EDFD30001C0F46 /* XCTest.framework in Frameworks */,
+				BD32EF2E18EDFD30001C0F46 /* UIKit.framework in Frameworks */,
+				BD32EF2D18EDFD30001C0F46 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD32EF0018EDFD30001C0F46 = {
+			isa = PBXGroup;
+			children = (
+				BD32EF4218EDFF13001C0F46 /* ALOTableFormsManager.h */,
+				BD32EF4318EDFF13001C0F46 /* ALOTableFormsManager.m */,
+				BD32EF4118EDFD64001C0F46 /* ALOTableFormsManager */,
+				BD32EF1218EDFD30001C0F46 /* ALOTableFormsManagerExample */,
+				BD32EF3118EDFD30001C0F46 /* ALOTableFormsManagerExampleTests */,
+				BD32EF0B18EDFD30001C0F46 /* Frameworks */,
+				BD32EF0A18EDFD30001C0F46 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD32EF0A18EDFD30001C0F46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD32EF0918EDFD30001C0F46 /* ALOTableFormsManagerExample.app */,
+				BD32EF2A18EDFD30001C0F46 /* ALOTableFormsManagerExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD32EF0B18EDFD30001C0F46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD32EF0C18EDFD30001C0F46 /* Foundation.framework */,
+				BD32EF0E18EDFD30001C0F46 /* CoreGraphics.framework */,
+				BD32EF1018EDFD30001C0F46 /* UIKit.framework */,
+				BD32EF2B18EDFD30001C0F46 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD32EF1218EDFD30001C0F46 /* ALOTableFormsManagerExample */ = {
+			isa = PBXGroup;
+			children = (
+				BD32EF1B18EDFD30001C0F46 /* ALOAppDelegate.h */,
+				BD32EF1C18EDFD30001C0F46 /* ALOAppDelegate.m */,
+				BD32EF1E18EDFD30001C0F46 /* Main.storyboard */,
+				BD32EF2118EDFD30001C0F46 /* ALOViewController.h */,
+				BD32EF2218EDFD30001C0F46 /* ALOViewController.m */,
+				BD32EF2418EDFD30001C0F46 /* Images.xcassets */,
+				BD32EF1318EDFD30001C0F46 /* Supporting Files */,
+			);
+			path = ALOTableFormsManagerExample;
+			sourceTree = "<group>";
+		};
+		BD32EF1318EDFD30001C0F46 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD32EF1418EDFD30001C0F46 /* ALOTableFormsManagerExample-Info.plist */,
+				BD32EF1518EDFD30001C0F46 /* InfoPlist.strings */,
+				BD32EF1818EDFD30001C0F46 /* main.m */,
+				BD32EF1A18EDFD30001C0F46 /* ALOTableFormsManagerExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD32EF3118EDFD30001C0F46 /* ALOTableFormsManagerExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD32EF3718EDFD30001C0F46 /* ALOTableFormsManagerExampleTests.m */,
+				BD32EF3218EDFD30001C0F46 /* Supporting Files */,
+			);
+			path = ALOTableFormsManagerExampleTests;
+			sourceTree = "<group>";
+		};
+		BD32EF3218EDFD30001C0F46 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD32EF3318EDFD30001C0F46 /* ALOTableFormsManagerExampleTests-Info.plist */,
+				BD32EF3418EDFD30001C0F46 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD32EF4118EDFD64001C0F46 /* ALOTableFormsManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ALOTableFormsManager;
+			path = ALOTableFormsManagerExample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD32EF0818EDFD30001C0F46 /* ALOTableFormsManagerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD32EF3B18EDFD30001C0F46 /* Build configuration list for PBXNativeTarget "ALOTableFormsManagerExample" */;
+			buildPhases = (
+				BD32EF0518EDFD30001C0F46 /* Sources */,
+				BD32EF0618EDFD30001C0F46 /* Frameworks */,
+				BD32EF0718EDFD30001C0F46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ALOTableFormsManagerExample;
+			productName = ALOTableFormsManagerExample;
+			productReference = BD32EF0918EDFD30001C0F46 /* ALOTableFormsManagerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD32EF2918EDFD30001C0F46 /* ALOTableFormsManagerExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD32EF3E18EDFD30001C0F46 /* Build configuration list for PBXNativeTarget "ALOTableFormsManagerExampleTests" */;
+			buildPhases = (
+				BD32EF2618EDFD30001C0F46 /* Sources */,
+				BD32EF2718EDFD30001C0F46 /* Frameworks */,
+				BD32EF2818EDFD30001C0F46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD32EF3018EDFD30001C0F46 /* PBXTargetDependency */,
+			);
+			name = ALOTableFormsManagerExampleTests;
+			productName = ALOTableFormsManagerExampleTests;
+			productReference = BD32EF2A18EDFD30001C0F46 /* ALOTableFormsManagerExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD32EF0118EDFD30001C0F46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ALO;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Alexey Yachmenov";
+				TargetAttributes = {
+					BD32EF2918EDFD30001C0F46 = {
+						TestTargetID = BD32EF0818EDFD30001C0F46;
+					};
+				};
+			};
+			buildConfigurationList = BD32EF0418EDFD30001C0F46 /* Build configuration list for PBXProject "ALOTableFormsManagerExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD32EF0018EDFD30001C0F46;
+			productRefGroup = BD32EF0A18EDFD30001C0F46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD32EF0818EDFD30001C0F46 /* ALOTableFormsManagerExample */,
+				BD32EF2918EDFD30001C0F46 /* ALOTableFormsManagerExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD32EF0718EDFD30001C0F46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD32EF2518EDFD30001C0F46 /* Images.xcassets in Resources */,
+				BD32EF1718EDFD30001C0F46 /* InfoPlist.strings in Resources */,
+				BD32EF2018EDFD30001C0F46 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD32EF2818EDFD30001C0F46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD32EF3618EDFD30001C0F46 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD32EF0518EDFD30001C0F46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD32EF1918EDFD30001C0F46 /* main.m in Sources */,
+				BD32EF2318EDFD30001C0F46 /* ALOViewController.m in Sources */,
+				BD32EF1D18EDFD30001C0F46 /* ALOAppDelegate.m in Sources */,
+				BD32EF4418EDFF13001C0F46 /* ALOTableFormsManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD32EF2618EDFD30001C0F46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD32EF3818EDFD30001C0F46 /* ALOTableFormsManagerExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD32EF3018EDFD30001C0F46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD32EF0818EDFD30001C0F46 /* ALOTableFormsManagerExample */;
+			targetProxy = BD32EF2F18EDFD30001C0F46 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD32EF1518EDFD30001C0F46 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD32EF1618EDFD30001C0F46 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BD32EF1E18EDFD30001C0F46 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD32EF1F18EDFD30001C0F46 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD32EF3418EDFD30001C0F46 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD32EF3518EDFD30001C0F46 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD32EF3918EDFD30001C0F46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BD32EF3A18EDFD30001C0F46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD32EF3C18EDFD30001C0F46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ALOTableFormsManagerExample/ALOTableFormsManagerExample-Prefix.pch";
+				INFOPLIST_FILE = "ALOTableFormsManagerExample/ALOTableFormsManagerExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BD32EF3D18EDFD30001C0F46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ALOTableFormsManagerExample/ALOTableFormsManagerExample-Prefix.pch";
+				INFOPLIST_FILE = "ALOTableFormsManagerExample/ALOTableFormsManagerExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BD32EF3F18EDFD30001C0F46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ALOTableFormsManagerExample.app/ALOTableFormsManagerExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ALOTableFormsManagerExample/ALOTableFormsManagerExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ALOTableFormsManagerExampleTests/ALOTableFormsManagerExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BD32EF4018EDFD30001C0F46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ALOTableFormsManagerExample.app/ALOTableFormsManagerExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ALOTableFormsManagerExample/ALOTableFormsManagerExample-Prefix.pch";
+				INFOPLIST_FILE = "ALOTableFormsManagerExampleTests/ALOTableFormsManagerExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD32EF0418EDFD30001C0F46 /* Build configuration list for PBXProject "ALOTableFormsManagerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD32EF3918EDFD30001C0F46 /* Debug */,
+				BD32EF3A18EDFD30001C0F46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD32EF3B18EDFD30001C0F46 /* Build configuration list for PBXNativeTarget "ALOTableFormsManagerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD32EF3C18EDFD30001C0F46 /* Debug */,
+				BD32EF3D18EDFD30001C0F46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD32EF3E18EDFD30001C0F46 /* Build configuration list for PBXNativeTarget "ALOTableFormsManagerExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD32EF3F18EDFD30001C0F46 /* Debug */,
+				BD32EF4018EDFD30001C0F46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD32EF0118EDFD30001C0F46 /* Project object */;
+}
