@@ -7,8 +7,13 @@
 //
 
 #import "ALOViewController.h"
+#import "ALOTableFormsManager.h"
 
 @interface ALOViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) ALOTableFormsManager *manager;
 
 @end
 
@@ -18,6 +23,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    ALOTableFormsManager *manager = [[ALOTableFormsManager alloc] initWithTableView:self.tableView];
+    self.manager = manager;
 }
 
 - (void)didReceiveMemoryWarning
