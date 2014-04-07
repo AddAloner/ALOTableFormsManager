@@ -16,13 +16,19 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="d1i-4x-a7S">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="d1i-4x-a7S">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d1i-4x-a7S" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="top" id="EFd-t5-ZjZ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="d1i-4x-a7S" secondAttribute="bottom" id="Hc2-ZJ-RP2"/>
+                            <constraint firstItem="d1i-4x-a7S" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Uvu-IP-VJq"/>
+                            <constraint firstAttribute="trailing" secondItem="d1i-4x-a7S" secondAttribute="trailing" id="l60-7E-EAn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KpL-Us-cTS"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>

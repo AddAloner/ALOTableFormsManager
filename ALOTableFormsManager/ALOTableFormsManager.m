@@ -10,6 +10,8 @@
 
 @interface ALOTableFormsManager ()
 
+@property (nonatomic, strong) NSMutableArray *mutableSections;
+
 @end
 
 @implementation ALOTableFormsManager
@@ -22,31 +24,74 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         
-        // for test
-        self->_cells = [[NSMutableArray alloc] initWithCapacity:10];
-        [self->_cells addObject:@"Test cell 1"];
-        [self->_cells addObject:@"Test cell 2"];
+        _mutableSections = [NSMutableArray new];
     }
     return self;
+}
+
+#pragma mark - Properties
+
+- (NSArray *)sections
+{
+    return [NSArray arrayWithArray:self.mutableSections];
+}
+
+#pragma mark - Sections
+
+- (void)addSection:(ALOTableFormsSection *)section
+{
+    section.formManager = self;
+    [self.mutableSections addObject:section];
+}
+
+- (void)addSection:(ALOTableFormsSection *)section atIndex:(NSUInteger)index
+{
+    section.formManager = self;
+    [self.mutableSections insertObject:section atIndex:index];
+}
+
+-(void)removeSectionAtIndex:(NSUInteger)index
+{
+    [self.mutableSections removeObjectAtIndex:index];
+}
+
+-(void)removeAllSections
+{
+    [self.mutableSections removeAllObjects];
 }
 
 #pragma mark - TableView dataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // in first version will be only one section
-    return 1;
+    return self.sections.count;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.cells.count;
+    return ((ALOTableFormsSection*)self.sections[section]).items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    cell.textLabel.text = self.cells[indexPath.row];
-    return cell;
+    id item = ((ALOTableFormsSection*)self.sections[indexPath.section]).items[indexPath.row];
+    
+    if ([item isKindOfClass:[UITableViewCell class]])
+    {
+        return item;
+    }
+    else if ([item isKindOfClass:[NSString class]])
+    {
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"stringCell"];
+        cell.textLabel.text = (NSString*)item;
+        return cell;
+    }
+    else if ([item isKindOfClass:[ALOTableFormsItem class]])
+    {
+        return ((ALOTableFormsItem*)item).cell;
+    }
+    
+    return nil;
 }
 
 #pragma mark - TableView delegate

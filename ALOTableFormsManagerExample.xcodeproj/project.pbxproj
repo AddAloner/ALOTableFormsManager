@@ -22,6 +22,10 @@
 		BD32EF3618EDFD30001C0F46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD32EF3418EDFD30001C0F46 /* InfoPlist.strings */; };
 		BD32EF3818EDFD30001C0F46 /* ALOTableFormsManagerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EF3718EDFD30001C0F46 /* ALOTableFormsManagerExampleTests.m */; };
 		BD32EF4418EDFF13001C0F46 /* ALOTableFormsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EF4318EDFF13001C0F46 /* ALOTableFormsManager.m */; };
+		BDCC266918F1CAFD00AC9711 /* ALOTableFormsSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC266818F1CAFD00AC9711 /* ALOTableFormsSection.m */; };
+		BDCC267118F31E2C00AC9711 /* ALOTableFormsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC267018F31E2C00AC9711 /* ALOTableFormsTextField.m */; };
+		BDCC267418F320F600AC9711 /* ALOTableFormsNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC267318F320F600AC9711 /* ALOTableFormsNavigationBar.m */; };
+		BDCC267718F3213000AC9711 /* ALOTableFormsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC267618F3213000AC9711 /* ALOTableFormsItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +58,16 @@
 		BD32EF3318EDFD30001C0F46 /* ALOTableFormsManagerExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ALOTableFormsManagerExampleTests-Info.plist"; sourceTree = "<group>"; };
 		BD32EF3518EDFD30001C0F46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BD32EF3718EDFD30001C0F46 /* ALOTableFormsManagerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALOTableFormsManagerExampleTests.m; sourceTree = "<group>"; };
-		BD32EF4218EDFF13001C0F46 /* ALOTableFormsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALOTableFormsManager.h; path = ALOTableFormsManager/ALOTableFormsManager.h; sourceTree = "<group>"; };
-		BD32EF4318EDFF13001C0F46 /* ALOTableFormsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALOTableFormsManager.m; path = ALOTableFormsManager/ALOTableFormsManager.m; sourceTree = "<group>"; };
+		BD32EF4218EDFF13001C0F46 /* ALOTableFormsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALOTableFormsManager.h; path = ../ALOTableFormsManager/ALOTableFormsManager.h; sourceTree = "<group>"; };
+		BD32EF4318EDFF13001C0F46 /* ALOTableFormsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALOTableFormsManager.m; path = ../ALOTableFormsManager/ALOTableFormsManager.m; sourceTree = "<group>"; };
+		BDCC266718F1CAFD00AC9711 /* ALOTableFormsSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALOTableFormsSection.h; path = ALOTableFormsManager/ALOTableFormsSection.h; sourceTree = SOURCE_ROOT; };
+		BDCC266818F1CAFD00AC9711 /* ALOTableFormsSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALOTableFormsSection.m; path = ALOTableFormsManager/ALOTableFormsSection.m; sourceTree = SOURCE_ROOT; };
+		BDCC266F18F31E2C00AC9711 /* ALOTableFormsTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALOTableFormsTextField.h; path = ALOTableFormsManager/Items/ALOTableFormsTextField.h; sourceTree = SOURCE_ROOT; };
+		BDCC267018F31E2C00AC9711 /* ALOTableFormsTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALOTableFormsTextField.m; path = ALOTableFormsManager/Items/ALOTableFormsTextField.m; sourceTree = SOURCE_ROOT; };
+		BDCC267218F320F600AC9711 /* ALOTableFormsNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALOTableFormsNavigationBar.h; path = ALOTableFormsManager/ALOTableFormsNavigationBar.h; sourceTree = SOURCE_ROOT; };
+		BDCC267318F320F600AC9711 /* ALOTableFormsNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALOTableFormsNavigationBar.m; path = ALOTableFormsManager/ALOTableFormsNavigationBar.m; sourceTree = SOURCE_ROOT; };
+		BDCC267518F3213000AC9711 /* ALOTableFormsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALOTableFormsItem.h; path = ALOTableFormsManager/ALOTableFormsItem.h; sourceTree = SOURCE_ROOT; };
+		BDCC267618F3213000AC9711 /* ALOTableFormsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALOTableFormsItem.m; path = ALOTableFormsManager/ALOTableFormsItem.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +97,6 @@
 		BD32EF0018EDFD30001C0F46 = {
 			isa = PBXGroup;
 			children = (
-				BD32EF4218EDFF13001C0F46 /* ALOTableFormsManager.h */,
-				BD32EF4318EDFF13001C0F46 /* ALOTableFormsManager.m */,
 				BD32EF4118EDFD64001C0F46 /* ALOTableFormsManager */,
 				BD32EF1218EDFD30001C0F46 /* ALOTableFormsManagerExample */,
 				BD32EF3118EDFD30001C0F46 /* ALOTableFormsManagerExampleTests */,
@@ -161,9 +171,35 @@
 		BD32EF4118EDFD64001C0F46 /* ALOTableFormsManager */ = {
 			isa = PBXGroup;
 			children = (
+				BDCC266E18F31AB300AC9711 /* Cells */,
+				BDCC266D18F31AAB00AC9711 /* Items */,
+				BD32EF4218EDFF13001C0F46 /* ALOTableFormsManager.h */,
+				BD32EF4318EDFF13001C0F46 /* ALOTableFormsManager.m */,
+				BDCC267218F320F600AC9711 /* ALOTableFormsNavigationBar.h */,
+				BDCC267318F320F600AC9711 /* ALOTableFormsNavigationBar.m */,
+				BDCC266718F1CAFD00AC9711 /* ALOTableFormsSection.h */,
+				BDCC266818F1CAFD00AC9711 /* ALOTableFormsSection.m */,
+				BDCC267518F3213000AC9711 /* ALOTableFormsItem.h */,
+				BDCC267618F3213000AC9711 /* ALOTableFormsItem.m */,
 			);
 			name = ALOTableFormsManager;
 			path = ALOTableFormsManagerExample;
+			sourceTree = "<group>";
+		};
+		BDCC266D18F31AAB00AC9711 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				BDCC266F18F31E2C00AC9711 /* ALOTableFormsTextField.h */,
+				BDCC267018F31E2C00AC9711 /* ALOTableFormsTextField.m */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
+		BDCC266E18F31AB300AC9711 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +303,11 @@
 				BD32EF1918EDFD30001C0F46 /* main.m in Sources */,
 				BD32EF2318EDFD30001C0F46 /* ALOViewController.m in Sources */,
 				BD32EF1D18EDFD30001C0F46 /* ALOAppDelegate.m in Sources */,
+				BDCC267118F31E2C00AC9711 /* ALOTableFormsTextField.m in Sources */,
+				BDCC266918F1CAFD00AC9711 /* ALOTableFormsSection.m in Sources */,
 				BD32EF4418EDFF13001C0F46 /* ALOTableFormsManager.m in Sources */,
+				BDCC267718F3213000AC9711 /* ALOTableFormsItem.m in Sources */,
+				BDCC267418F320F600AC9711 /* ALOTableFormsNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

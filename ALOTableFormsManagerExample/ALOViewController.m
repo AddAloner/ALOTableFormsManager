@@ -25,6 +25,10 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     ALOTableFormsManager *manager = [[ALOTableFormsManager alloc] initWithTableView:self.tableView];
+    ALOTableFormsSection *section = [ALOTableFormsSection new];
+    [section addItem:[[ALOTableFormsTextField alloc] initWithLabel:@"Test cell" placeholder:@"text value"]];
+    [section addItem:@"Simple string cell"];
+    [manager addSection:section];
     self.manager = manager;
 }
 
