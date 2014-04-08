@@ -95,9 +95,8 @@
     }
     else if ([item isKindOfClass:[NSString class]])
     {
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"stringCell"];
-        cell.textLabel.text = (NSString*)item;
-        return cell;
+        ALOTableFormsItem *cellItem = [[ALOTableFormsItem alloc] initWithLabel:item];
+        return [cellItem cell];
     }
     else if ([item isKindOfClass:[ALOTableFormsItem class]])
     {

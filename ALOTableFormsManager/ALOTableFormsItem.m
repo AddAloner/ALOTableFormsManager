@@ -35,16 +35,20 @@ extern NSString *const _reuseId;
     return self;
 }
 
-#pragma mark - Cell
+#pragma mark - Properties
 - (UITableViewCell *)cell
 {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                                   reuseIdentifier:self.reuseId];
-    cell.textLabel.text = self.label;
+    if (!_cell)
+    {
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                                       reuseIdentifier:self.reuseId];
+        cell.textLabel.text = self.label;
+        _cell = cell;
+    }
     
-    return cell;
+    return _cell;
 }
-#pragma mark - Properties
+
 -(NSString *)reuseId
 {
     return @"tableFormsCell";

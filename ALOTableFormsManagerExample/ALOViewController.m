@@ -26,7 +26,14 @@
     
     ALOTableFormsManager *manager = [[ALOTableFormsManager alloc] initWithTableView:self.tableView];
     ALOTableFormsSection *section = [ALOTableFormsSection new];
-    [section addItem:[[ALOTableFormsTextField alloc] initWithLabel:@"Test cell" placeholder:@"text value"]];
+    [section addItem:[[ALOTableFormsTextField alloc] initWithLabel:@"Test cell 1"
+                                                       placeholder:@"text value"]];
+    [section addItem:[[ALOTableFormsTextField alloc] initWithLabel:@"Test cell 2"
+                                                       placeholder:@"required value"
+                                                             value:@""
+                                                changeValueHandler:^(NSString *value) {
+                                                    NSLog(@"Test cell 2 value: %@", value);
+                                                }]];
     [section addItem:@"Simple string cell"];
     [manager addSection:section];
     self.manager = manager;

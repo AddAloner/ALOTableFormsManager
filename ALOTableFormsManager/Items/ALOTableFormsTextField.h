@@ -15,9 +15,15 @@
 @property (nonatomic, copy) NSString *cellValue;
 @property (nonatomic, strong, readonly) ALOTextFieldTableViewCell *cell;
 
--(id)initWithLabel:(NSString *)label;
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder;
+// handler
+@property (nonatomic, copy) void(^changeValueHandler)(NSString *value);
 
--(ALOTextFieldTableViewCell*)cell;
+// validation
+@property (nonatomic, assign) NSUInteger minLength;
+@property (nonatomic, assign) NSUInteger maxLength;
+
+-(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder;
+-(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSString *)value;
+-(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSString *)value changeValueHandler:(void(^)(NSString *value))changeValueHandler;
 
 @end
