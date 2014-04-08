@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ALOTableFormsManager/ALOTableFormsManager.m"
-            timestampString = "418595150.513858"
+            timestampString = "418670812.406285"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "-addSection:"
             landmarkType = "5">
          </BreakpointContent>

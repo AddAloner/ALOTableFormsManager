@@ -11,12 +11,10 @@
 @class ALOTableFormsSection;
 @interface ALOTableFormsItem : NSObject {
     @protected
-    UITableViewCell *_cell;
 }
 
 // structure
 @property (nonatomic, strong, readonly) NSString *reuseId;
-@property (nonatomic, strong, readonly) UITableViewCell *cell;
 @property (nonatomic, weak) ALOTableFormsSection *section;
 
 // cell propeties
@@ -29,6 +27,8 @@
 - (id)initWithLabel:(NSString *)label;
 //- (id)initWithLabel:(NSString *)label changeValueHandler:(void(^)(ALOTableFormsItem *item))changeValueHandler;
 
+// generate cell for this item
+- (UITableViewCell*)cell;
 - (BOOL)validate;
 
 @end

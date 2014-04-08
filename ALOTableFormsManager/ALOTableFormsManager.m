@@ -16,6 +16,12 @@
 
 @implementation ALOTableFormsManager
 
+-(id)init
+{
+    @throw [NSException exceptionWithName:NSGenericException reason:@"Don't use init, use initWithTableView:" userInfo:nil];
+    return nil;
+}
+
 - (id)initWithTableView:(UITableView*)tableView
 {
     if (self = [super init])
@@ -29,11 +35,17 @@
     return self;
 }
 
+-(void)dealloc
+{
+    self.tableView.delegate = nil;
+    self.tableView.dataSource = nil;
+}
+
 #pragma mark - Properties
 
 - (NSArray *)sections
 {
-    return [NSArray arrayWithArray:self.mutableSections];
+    return self.mutableSections;
 }
 
 #pragma mark - Sections
@@ -61,6 +73,7 @@
 }
 
 #pragma mark - TableView dataSource
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // in first version will be only one section
@@ -88,11 +101,16 @@
     }
     else if ([item isKindOfClass:[ALOTableFormsItem class]])
     {
-        return ((ALOTableFormsItem*)item).cell;
+        return [item cell];
     }
     
     return nil;
 }
 
 #pragma mark - TableView delegate
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return [self.tableView cellForRowAtIndexPath:indexPath].frame.size.height;
+//}
+
 @end

@@ -30,7 +30,7 @@
 #pragma mark - Properties
 - (NSArray *)items
 {
-    return [NSArray arrayWithArray:self.mutableItems];
+    return self.mutableItems;
 }
 
 #pragma mark - Sections

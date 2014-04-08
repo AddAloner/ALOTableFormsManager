@@ -22,8 +22,6 @@ extern NSString *const _reuseId;
 {
     if (self = [super init])
     {
-        _cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                             reuseIdentifier:self.reuseId];
     }
     return self;
 }
@@ -32,25 +30,30 @@ extern NSString *const _reuseId;
 {
     if (self = [self init])
     {
-        _cell.textLabel.text = label;
+        _label = label;
     }
     return self;
 }
 
+#pragma mark - Cell
+- (UITableViewCell *)cell
+{
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                                   reuseIdentifier:self.reuseId];
+    cell.textLabel.text = self.label;
+    
+    return cell;
+}
 #pragma mark - Properties
 -(NSString *)reuseId
 {
     return @"tableFormsCell";
 }
 
-- (void)setLabel:(NSString *)label
+#pragma mark - Validate
+-(BOOL)validate
 {
-    self.cell.textLabel.text = label;
-}
-
-- (NSString *)label
-{
-    return self.cell.textLabel.text;
+    return YES;
 }
 
 @end

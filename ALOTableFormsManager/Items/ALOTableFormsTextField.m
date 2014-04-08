@@ -8,13 +8,16 @@
 
 #import "ALOTableFormsTextField.h"
 
+@interface ALOTableFormsTextField () <UITextFieldDelegate>
+
+@end
+
 @implementation ALOTableFormsTextField
 
 -(id)init
 {
     if (self = [super init])
     {
-        [self initTextField];
     }
     return self;
 }
@@ -23,7 +26,6 @@
 {
     if (self = [super initWithLabel:label])
     {
-        [self initTextField];
     }
     return self;
 }
@@ -32,18 +34,33 @@
 {
     if (self = [self initWithLabel:label])
     {
-        _textField.placeholder = placeholder;
+        _placeholder = placeholder;
     }
     return self;
 }
 
--(void)initTextField
+#pragma mark - Cell
+-(ALOTextFieldTableViewCell *)cell
 {
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(self.cell.bounds.size.width / 2, 0, self.cell.bounds.size.width / 2 - 15, self.cell.bounds.size.height)];
-    textField.textAlignment = NSTextAlignmentRight;
-//    textField.delegate = self;
-    self.cell.accessoryView = textField;
-    _textField = textField;
+    ALOTextFieldTableViewCell *cell = [[ALOTextFieldTableViewCell alloc]
+                                       initWithStyle:UITableViewCellStyleDefault
+                                       reuseIdentifier:self.reuseId];
+    cell.textLabel.text = self.label;
+    cell.textField.delegate = self;
+    cell.textField.placeholder = self.placeholder;
+    return cell;
+}
+
+#pragma mark - Text field
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    self.cellValue = textField.text;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
 }
 
 @end
