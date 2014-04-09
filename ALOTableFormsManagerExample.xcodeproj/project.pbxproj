@@ -185,8 +185,7 @@
 				BDCC267518F3213000AC9711 /* ALOTableFormsItem.h */,
 				BDCC267618F3213000AC9711 /* ALOTableFormsItem.m */,
 			);
-			name = ALOTableFormsManager;
-			path = ALOTableFormsManagerExample;
+			path = ALOTableFormsManager;
 			sourceTree = "<group>";
 		};
 		BDCC266D18F31AAB00AC9711 /* Items */ = {
@@ -195,7 +194,7 @@
 				BDCC266F18F31E2C00AC9711 /* ALOTableFormsTextField.h */,
 				BDCC267018F31E2C00AC9711 /* ALOTableFormsTextField.m */,
 			);
-			name = Items;
+			path = Items;
 			sourceTree = "<group>";
 		};
 		BDCC266E18F31AB300AC9711 /* Cells */ = {
@@ -204,7 +203,7 @@
 				BDCC267818F45BA200AC9711 /* ALOTextFieldTableViewCell.h */,
 				BDCC267918F45BA200AC9711 /* ALOTextFieldTableViewCell.m */,
 			);
-			name = Cells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

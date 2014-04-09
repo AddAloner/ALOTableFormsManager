@@ -7,28 +7,13 @@
 //
 
 #import "ALOTableFormsTextField.h"
+#import "ALOTableFormsManager.h"
 
 @interface ALOTableFormsTextField () <UITextFieldDelegate>
 
 @end
 
 @implementation ALOTableFormsTextField
-
-//-(id)init
-//{
-//    if (self = [super init])
-//    {
-//    }
-//    return self;
-//}
-//
-//-(id)initWithLabel:(NSString *)label
-//{
-//    if (self = [super initWithLabel:label])
-//    {
-//    }
-//    return self;
-//}
 
 -(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder
 {
@@ -87,7 +72,12 @@
 #pragma mark - Text field
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    if (self.changeValueHandler)
+    if (self.section.formManager.validateOnEdit)
+    {
+        [self validate];
+    }
+        
+    if (self.isValide && self.changeValueHandler)
         self.changeValueHandler(self.cellValue);
 }
 
@@ -102,24 +92,24 @@
 {
     if (self.isRequred && [self.cellValue isEqual:@""])
     {
-        self.error = [NSString stringWithFormat:NSLocalizedString(@"Field %@ is required", @""), self.label];
-        return false;
+        self.error = [NSString stringWithFormat:NSLocalizedString(@"Field \"%@\" is required", @""), self.label];
+        self.isValide = false;
     }
-
-    if (self.minLength > 0 && self.cellValue.length < self.minLength)
+    else if (self.minLength > 0 && self.cellValue.length < self.minLength)
     {
         self.error = [NSString stringWithFormat:NSLocalizedString(@"Min length for %@ is %i", @""), self.label, self.minLength];
-        return false;
+        self.isValide = false;
     }
-    
-    if (self.maxLength > 0 && self.cellValue.length > self.maxLength)
+    else if (self.maxLength > 0 && self.cellValue.length > self.maxLength)
     {
         self.error = [NSString stringWithFormat:NSLocalizedString(@"Max length for %@ is %i", @""), self.label, self.maxLength];
-        return false;
+        self.isValide = false;
     }
-    
-
-    return true;
+    else
+    {
+        self.isValide = true;
+    }
+    return self.isValide;
 }
 
 @end

@@ -107,9 +107,9 @@
 }
 
 #pragma mark - TableView delegate
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return [self.tableView cellForRowAtIndexPath:indexPath].frame.size.height;
-//}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44;
+}
 
 @end

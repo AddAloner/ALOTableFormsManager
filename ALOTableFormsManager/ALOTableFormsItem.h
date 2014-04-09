@@ -12,6 +12,7 @@
 @interface ALOTableFormsItem : NSObject {
     @protected
     id _cell;
+    BOOL _isValide;
 }
 
 - (id)initWithLabel:(NSString *)label;
@@ -26,7 +27,10 @@
 
 // validation
 @property (nonatomic, assign) BOOL isRequred;
+@property (nonatomic, assign) BOOL isValide;
 @property (nonatomic, copy) NSString *error;
+@property (nonatomic, copy) UIColor *invalideBackgroundColor;
 - (BOOL)validate;
+- (void)updateCellWithValidationState;
 
 @end

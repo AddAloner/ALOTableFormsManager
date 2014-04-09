@@ -22,6 +22,7 @@ extern NSString *const _reuseId;
 {
     if (self = [super init])
     {
+        _isValide = YES;
     }
     return self;
 }
@@ -54,10 +55,46 @@ extern NSString *const _reuseId;
     return @"tableFormsCell";
 }
 
+-(UIColor *)invalideBackgroundColor
+{
+    if (!_invalideBackgroundColor)
+        _invalideBackgroundColor = [UIColor colorWithRed:1.f green:0.9f blue:0.9f alpha:1.f];
+    
+    return _invalideBackgroundColor;
+}
+
+-(BOOL)isValide
+{
+    return _isValide;
+}
+
+-(void)setIsValide:(BOOL)isValide
+{
+    if (_isValide != isValide)
+    {
+        _isValide = isValide;
+        [self updateCellWithValidationState];
+    }
+}
+
 #pragma mark - Validate
 -(BOOL)validate
 {
     return YES;
+}
+
+-(void)updateCellWithValidationState
+{
+    if (!_isValide)
+    {
+        self.cell.backgroundColor = self.invalideBackgroundColor;
+    }
+    else
+    {
+        // TODO change on default cell color
+        self.cell.backgroundColor = [UIColor whiteColor];
+        self.error = nil;
+    }
 }
 
 @end

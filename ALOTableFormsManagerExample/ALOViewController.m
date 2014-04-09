@@ -26,15 +26,26 @@
     
     ALOTableFormsManager *manager = [[ALOTableFormsManager alloc] initWithTableView:self.tableView];
     ALOTableFormsSection *section = [ALOTableFormsSection new];
+    
+    manager.validateOnEdit = YES;
+    
+    // simple text cell
+    [section addItem:@"Simple string cell"];
+    
+    // simple text field
     [section addItem:[[ALOTableFormsTextField alloc] initWithLabel:@"Test cell 1"
                                                        placeholder:@"text value"]];
-    [section addItem:[[ALOTableFormsTextField alloc] initWithLabel:@"Test cell 2"
-                                                       placeholder:@"required value"
-                                                             value:@""
-                                                changeValueHandler:^(NSString *value) {
-                                                    NSLog(@"Test cell 2 value: %@", value);
-                                                }]];
-    [section addItem:@"Simple string cell"];
+    
+    // item with validate and other futures
+    ALOTableFormsTextField *item2 = [[ALOTableFormsTextField alloc] initWithLabel:@"TestCell 2"
+                                                                      placeholder:@"required value"
+                                                                            value:@""
+                                                               changeValueHandler:^(NSString *value) {
+                                                                   NSLog(@"Test cell 2 value: %@", value);
+                                                               }];
+    item2.isRequred = YES;
+    [section addItem:item2];
+    
     [manager addSection:section];
     self.manager = manager;
 }
