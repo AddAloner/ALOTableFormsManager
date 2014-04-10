@@ -45,7 +45,14 @@
                                                                }];
     item2.isRequred = YES;
     [section addItem:item2];
-    
+
+    // item with validate and other futures
+    [section addItem:[[ALOTableFormsSwitch alloc] initWithLabel:@"Switch cell"
+                                                          value:YES
+                                             changeValueHandler:^(BOOL value) {
+                                                 NSLog(@"Switch cell value: %i", value);
+                                             }]];
+
     [manager addSection:section];
     self.manager = manager;
 }

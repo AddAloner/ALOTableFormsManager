@@ -27,6 +27,8 @@
 		BDCC267418F320F600AC9711 /* ALOTableFormsNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC267318F320F600AC9711 /* ALOTableFormsNavigationBar.m */; };
 		BDCC267718F3213000AC9711 /* ALOTableFormsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC267618F3213000AC9711 /* ALOTableFormsItem.m */; };
 		BDCC267A18F45BA200AC9711 /* ALOTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC267918F45BA200AC9711 /* ALOTextFieldTableViewCell.m */; };
+		BDCC26BD18F5B93000AC9711 /* ALOSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26BC18F5B93000AC9711 /* ALOSwitchTableViewCell.m */; };
+		BDCC26C018F5B94A00AC9711 /* ALOTableFormsSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26BF18F5B94A00AC9711 /* ALOTableFormsSwitch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,10 @@
 		BDCC267618F3213000AC9711 /* ALOTableFormsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALOTableFormsItem.m; path = ALOTableFormsManager/ALOTableFormsItem.m; sourceTree = SOURCE_ROOT; };
 		BDCC267818F45BA200AC9711 /* ALOTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALOTextFieldTableViewCell.h; path = ALOTableFormsManager/Cells/ALOTextFieldTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		BDCC267918F45BA200AC9711 /* ALOTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALOTextFieldTableViewCell.m; path = ALOTableFormsManager/Cells/ALOTextFieldTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		BDCC26BB18F5B93000AC9711 /* ALOSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOSwitchTableViewCell.h; sourceTree = "<group>"; };
+		BDCC26BC18F5B93000AC9711 /* ALOSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOSwitchTableViewCell.m; sourceTree = "<group>"; };
+		BDCC26BE18F5B94A00AC9711 /* ALOTableFormsSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOTableFormsSwitch.h; sourceTree = "<group>"; };
+		BDCC26BF18F5B94A00AC9711 /* ALOTableFormsSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOTableFormsSwitch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +199,8 @@
 			children = (
 				BDCC266F18F31E2C00AC9711 /* ALOTableFormsTextField.h */,
 				BDCC267018F31E2C00AC9711 /* ALOTableFormsTextField.m */,
+				BDCC26BE18F5B94A00AC9711 /* ALOTableFormsSwitch.h */,
+				BDCC26BF18F5B94A00AC9711 /* ALOTableFormsSwitch.m */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -202,6 +210,8 @@
 			children = (
 				BDCC267818F45BA200AC9711 /* ALOTextFieldTableViewCell.h */,
 				BDCC267918F45BA200AC9711 /* ALOTextFieldTableViewCell.m */,
+				BDCC26BB18F5B93000AC9711 /* ALOSwitchTableViewCell.h */,
+				BDCC26BC18F5B93000AC9711 /* ALOSwitchTableViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -310,6 +320,8 @@
 				BDCC267118F31E2C00AC9711 /* ALOTableFormsTextField.m in Sources */,
 				BDCC266918F1CAFD00AC9711 /* ALOTableFormsSection.m in Sources */,
 				BDCC267A18F45BA200AC9711 /* ALOTextFieldTableViewCell.m in Sources */,
+				BDCC26C018F5B94A00AC9711 /* ALOTableFormsSwitch.m in Sources */,
+				BDCC26BD18F5B93000AC9711 /* ALOSwitchTableViewCell.m in Sources */,
 				BD32EF4418EDFF13001C0F46 /* ALOTableFormsManager.m in Sources */,
 				BDCC267718F3213000AC9711 /* ALOTableFormsItem.m in Sources */,
 				BDCC267418F320F600AC9711 /* ALOTableFormsNavigationBar.m in Sources */,

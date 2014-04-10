@@ -14,7 +14,9 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        UISwitch *switcher = [UISwitch new];
+        self.accessoryView = switcher;
+        _switcher = switcher;
     }
     return self;
 }
@@ -28,7 +30,9 @@
 {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+    // you can't select this item!
+    if (selected)
+        [self setSelected:NO animated:NO];
 }
 
 @end

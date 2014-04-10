@@ -12,6 +12,7 @@
 #import "ALOTableFormsSection.h"
 #import "ALOTableFormsNavigationBar.h"
 #import "ALOTableFormsTextField.h"
+#import "ALOTableFormsSwitch.h"
 
 @interface ALOTableFormsManager : NSObject <UITableViewDelegate, UITableViewDataSource>
 

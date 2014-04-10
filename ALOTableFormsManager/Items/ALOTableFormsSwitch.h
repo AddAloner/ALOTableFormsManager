@@ -7,7 +7,18 @@
 //
 
 #import "ALOTableFormsItem.h"
+#import "ALOSwitchTableViewCell.h"
 
 @interface ALOTableFormsSwitch : ALOTableFormsItem
+
+@property (nonatomic, assign) BOOL cellValue;
+@property (nonatomic, strong, readonly) ALOSwitchTableViewCell *cell;
+
+// handler
+@property (nonatomic, copy) void(^changeValueHandler)(BOOL value);
+
+
+-(id)initWithLabel:(NSString *)label value:(BOOL)value;
+-(id)initWithLabel:(NSString *)label value:(BOOL)value changeValueHandler:(void(^)(BOOL value))changeValueHandler;
 
 @end

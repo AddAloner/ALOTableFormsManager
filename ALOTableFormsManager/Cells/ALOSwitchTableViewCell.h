@@ -10,4 +10,6 @@
 
 @interface ALOSwitchTableViewCell : UITableViewCell
 
+@property (nonatomic, strong, readonly) UISwitch *switcher;
+
 @end

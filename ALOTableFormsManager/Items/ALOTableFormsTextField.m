@@ -19,7 +19,7 @@
 {
     if (self = [self initWithLabel:label])
     {
-        _placeholder = placeholder;
+        self.cell.textField.placeholder = placeholder;
     }
     return self;
 }
@@ -42,7 +42,7 @@
     return self;
 }
 
-#pragma mark - Cell
+#pragma mark - Properties
 -(ALOTextFieldTableViewCell *)cell
 {
     if (!_cell)
@@ -50,15 +50,29 @@
         ALOTextFieldTableViewCell *cell = [[ALOTextFieldTableViewCell alloc]
                                            initWithStyle:UITableViewCellStyleDefault
                                            reuseIdentifier:self.reuseId];
-        cell.textLabel.text = self.label;
+//        cell.textLabel.text = self.label;
         cell.textField.delegate = self;
-        cell.textField.placeholder = self.placeholder;
+//        cell.textField.placeholder = self.placeholder;
         _cell = cell;
     }
     return _cell;
 }
 
-#pragma mark - Properties
+-(NSString *)reuseId
+{
+    return @"textFieldTableFormsCell";
+}
+
+-(NSString *)placeholder
+{
+    return self.cell.textField.placeholder;
+}
+
+-(void)setPlaceholder:(NSString *)placeholder
+{
+    self.cell.textField.placeholder = placeholder;
+}
+
 - (NSString *)cellValue
 {
     return self.cell.textField.text;

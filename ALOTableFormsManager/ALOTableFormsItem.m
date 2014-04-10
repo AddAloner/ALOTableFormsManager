@@ -31,7 +31,7 @@ extern NSString *const _reuseId;
 {
     if (self = [self init])
     {
-        _label = label;
+        self.cell.textLabel.text = label;
     }
     return self;
 }
@@ -43,7 +43,6 @@ extern NSString *const _reuseId;
     {
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                                        reuseIdentifier:self.reuseId];
-        cell.textLabel.text = self.label;
         _cell = cell;
     }
     
@@ -53,6 +52,16 @@ extern NSString *const _reuseId;
 -(NSString *)reuseId
 {
     return @"tableFormsCell";
+}
+
+-(NSString *)label
+{
+    return self.cell.textLabel.text;
+}
+
+-(void)setLabel:(NSString *)label
+{
+    self.cell.textLabel.text = label;
 }
 
 -(UIColor *)invalideBackgroundColor
@@ -91,7 +100,7 @@ extern NSString *const _reuseId;
     }
     else
     {
-        // TODO change on default cell color
+        // TODO: change on default cell color
         self.cell.backgroundColor = [UIColor whiteColor];
         self.error = nil;
     }
