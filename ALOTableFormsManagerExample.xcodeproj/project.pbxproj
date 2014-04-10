@@ -29,6 +29,8 @@
 		BDCC267A18F45BA200AC9711 /* ALOTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC267918F45BA200AC9711 /* ALOTextFieldTableViewCell.m */; };
 		BDCC26BD18F5B93000AC9711 /* ALOSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26BC18F5B93000AC9711 /* ALOSwitchTableViewCell.m */; };
 		BDCC26C018F5B94A00AC9711 /* ALOTableFormsSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26BF18F5B94A00AC9711 /* ALOTableFormsSwitch.m */; };
+		BDCC26C318F726DC00AC9711 /* ALODateFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26C218F726DC00AC9711 /* ALODateFieldTableViewCell.m */; };
+		BDCC26C618F726F600AC9711 /* ALOTableFormsDateField.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26C518F726F600AC9711 /* ALOTableFormsDateField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,10 @@
 		BDCC26BC18F5B93000AC9711 /* ALOSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOSwitchTableViewCell.m; sourceTree = "<group>"; };
 		BDCC26BE18F5B94A00AC9711 /* ALOTableFormsSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOTableFormsSwitch.h; sourceTree = "<group>"; };
 		BDCC26BF18F5B94A00AC9711 /* ALOTableFormsSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOTableFormsSwitch.m; sourceTree = "<group>"; };
+		BDCC26C118F726DC00AC9711 /* ALODateFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALODateFieldTableViewCell.h; sourceTree = "<group>"; };
+		BDCC26C218F726DC00AC9711 /* ALODateFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALODateFieldTableViewCell.m; sourceTree = "<group>"; };
+		BDCC26C418F726F600AC9711 /* ALOTableFormsDateField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOTableFormsDateField.h; sourceTree = "<group>"; };
+		BDCC26C518F726F600AC9711 /* ALOTableFormsDateField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOTableFormsDateField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +207,8 @@
 				BDCC267018F31E2C00AC9711 /* ALOTableFormsTextField.m */,
 				BDCC26BE18F5B94A00AC9711 /* ALOTableFormsSwitch.h */,
 				BDCC26BF18F5B94A00AC9711 /* ALOTableFormsSwitch.m */,
+				BDCC26C418F726F600AC9711 /* ALOTableFormsDateField.h */,
+				BDCC26C518F726F600AC9711 /* ALOTableFormsDateField.m */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -212,6 +220,8 @@
 				BDCC267918F45BA200AC9711 /* ALOTextFieldTableViewCell.m */,
 				BDCC26BB18F5B93000AC9711 /* ALOSwitchTableViewCell.h */,
 				BDCC26BC18F5B93000AC9711 /* ALOSwitchTableViewCell.m */,
+				BDCC26C118F726DC00AC9711 /* ALODateFieldTableViewCell.h */,
+				BDCC26C218F726DC00AC9711 /* ALODateFieldTableViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -325,6 +335,8 @@
 				BD32EF4418EDFF13001C0F46 /* ALOTableFormsManager.m in Sources */,
 				BDCC267718F3213000AC9711 /* ALOTableFormsItem.m in Sources */,
 				BDCC267418F320F600AC9711 /* ALOTableFormsNavigationBar.m in Sources */,
+				BDCC26C318F726DC00AC9711 /* ALODateFieldTableViewCell.m in Sources */,
+				BDCC26C618F726F600AC9711 /* ALOTableFormsDateField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

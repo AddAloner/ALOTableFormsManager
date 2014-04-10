@@ -57,6 +57,7 @@
         ALOSwitchTableViewCell *cell = [[ALOSwitchTableViewCell alloc]
                                         initWithStyle:UITableViewCellStyleDefault
                                         reuseIdentifier:self.reuseId];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         _cell = cell;
     }
     return _cell;

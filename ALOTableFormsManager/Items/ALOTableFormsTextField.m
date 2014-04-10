@@ -50,9 +50,8 @@
         ALOTextFieldTableViewCell *cell = [[ALOTextFieldTableViewCell alloc]
                                            initWithStyle:UITableViewCellStyleDefault
                                            reuseIdentifier:self.reuseId];
-//        cell.textLabel.text = self.label;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textField.delegate = self;
-//        cell.textField.placeholder = self.placeholder;
         _cell = cell;
     }
     return _cell;

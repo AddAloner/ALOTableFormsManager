@@ -26,13 +26,13 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // you can't select this item!
-    if (selected)
-        [self setSelected:NO animated:NO];
-}
+//- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+//{
+//    [super setSelected:selected animated:animated];
+//
+//    // you can't select this item!
+//    if (selected)
+//        [self setSelected:NO animated:NO];
+//}
 
 @end
