@@ -46,13 +46,21 @@
     item2.isRequred = YES;
     [section addItem:item2];
 
-    // item with validate and other futures
+    // simple switch item with cellback
     [section addItem:[[ALOTableFormsSwitch alloc] initWithLabel:@"Switch cell"
                                                           value:YES
                                              changeValueHandler:^(BOOL value) {
                                                  NSLog(@"Switch cell value: %i", value);
                                              }]];
 
+    // simple date field item with cellback
+    [section addItem:[[ALOTableFormsDateField alloc] initWithLabel:@"Date cell"
+                                                       placeholder: @"input date"
+                                                             value:[NSDate date]
+                                                changeValueHandler:^(NSDate *value) {
+                                                    NSLog(@"Switch cell value: %@", value.description);
+                                                }]];
+    
     [manager addSection:section];
     self.manager = manager;
 }
