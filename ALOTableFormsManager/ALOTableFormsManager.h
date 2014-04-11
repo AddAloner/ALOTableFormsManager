@@ -20,6 +20,10 @@
 @property (nonatomic, strong, readonly) NSArray *sections;
 @property (nonatomic, weak) UITableView *tableView;
 
+// default formatter for date inputs
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
+
+// validation
 @property (nonatomic, assign) bool validateOnDone;
 @property (nonatomic, assign) bool validateOnEdit;
 

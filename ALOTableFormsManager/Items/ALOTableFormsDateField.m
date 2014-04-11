@@ -28,9 +28,16 @@
 {
     if (self = [super initWithLabel:label placeholder:placeholder])
     {
-        _datePicker.date = value;
-        // TODO: use formatter
-        self.cell.textField.text = value.description;
+        if (value)
+        {
+            _datePicker.date = value;
+            if (self.dateFormatter)
+                self.cell.textField.text = [self.dateFormatter stringFromDate:value];
+            if (self.section.formManager.dateFormatter)
+                self.cell.textField.text = [self.section.formManager.dateFormatter stringFromDate:value];
+            else
+                self.cell.textField.text = value.description;
+        }
     }
     return self;
 }
@@ -94,8 +101,12 @@
 -(void)onDatePicked:(UIButton*)button
 {
     // update cell textField value
-    // TODO: use formatter
-    self.cell.textField.text = self.datePicker.date.description;
+    if (self.dateFormatter)
+        self.cell.textField.text = [self.dateFormatter stringFromDate:self.dateCellValue];
+    if (self.section.formManager.dateFormatter)
+        self.cell.textField.text = [self.section.formManager.dateFormatter stringFromDate:self.dateCellValue];
+    else
+        self.cell.textField.text = self.dateCellValue.description;
     
     if (self.section.formManager.validateOnEdit)
     {

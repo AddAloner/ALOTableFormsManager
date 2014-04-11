@@ -14,6 +14,7 @@
 @property (nonatomic, copy) NSString *cellValue __attribute__((unavailable));
 
 @property (nonatomic, strong) UIDatePicker *datePicker;
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
 
 // handler
 @property (nonatomic, copy) void(^changeValueHandler)(NSDate *value);

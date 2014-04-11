@@ -22,12 +22,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    // init date formatter
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.timeStyle = NSDateFormatterShortStyle;
+    formatter.dateStyle = NSDateFormatterShortStyle;
     
     ALOTableFormsManager *manager = [[ALOTableFormsManager alloc] initWithTableView:self.tableView];
     ALOTableFormsSection *section = [ALOTableFormsSection new];
     
     manager.validateOnEdit = YES;
+    manager.dateFormatter = formatter;
     
     // simple text cell
     [section addItem:@"Simple string cell"];
