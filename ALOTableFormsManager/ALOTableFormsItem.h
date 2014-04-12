@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class ALOTableFormsSection;
+
 @interface ALOTableFormsItem : NSObject {
     @protected
     id _cell;
@@ -17,9 +18,10 @@
 
 - (id)initWithLabel:(NSString *)label;
 
+@property (nonatomic, strong, readonly) UITableViewCell *cell;
+
 // structure
 @property (nonatomic, strong, readonly) NSString *reuseId;
-@property (nonatomic, strong, readonly) UITableViewCell *cell;
 @property (nonatomic, weak) ALOTableFormsSection *section;
 
 // cell propeties

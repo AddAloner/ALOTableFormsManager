@@ -19,7 +19,7 @@
 {
     if (self = [self initWithLabel:label])
     {
-        self.cell.textField.placeholder = placeholder;
+        _placeholder = placeholder;
     }
     return self;
 }
@@ -28,7 +28,7 @@
 {
     if (self = [self initWithLabel:label placeholder:placeholder])
     {
-        self.cell.textField.text = value;
+        _cellValue = value;
     }
     return self;
 }
@@ -45,11 +45,16 @@
 #pragma mark - Properties
 -(ALOTextFieldTableViewCell *)cell
 {
-    if (!_cell)
+    if (!_cell && self.section.formManager)
     {
         ALOTextFieldTableViewCell *cell = [[ALOTextFieldTableViewCell alloc]
-                                           initWithStyle:UITableViewCellStyleDefault
+                                           initWithStyle:self.section.formManager.cellStyle
                                            reuseIdentifier:self.reuseId];
+        cell.textLabel.text = self.label;
+        cell.textField.placeholder = self.placeholder;
+        cell.textField.text = self.cellValue ? self.cellValue : @"";
+
+        // disable textField cell selection
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textField.delegate = self;
         _cell = cell;
@@ -62,29 +67,25 @@
     return @"textFieldTableFormsCell";
 }
 
--(NSString *)placeholder
-{
-    return self.cell.textField.placeholder;
-}
-
 -(void)setPlaceholder:(NSString *)placeholder
 {
-    self.cell.textField.placeholder = placeholder;
-}
-
-- (NSString *)cellValue
-{
-    return self.cell.textField.text;
+    _placeholder = placeholder;
+    if (_cell)
+        self.cell.textField.placeholder = placeholder;
 }
 
 -(void)setCellValue:(NSString *)cellValue
 {
-    self.cell.textField.text = cellValue;
+    _cellValue = cellValue;
+    if (_cell)
+        self.cell.textField.text = cellValue;
 }
 
 #pragma mark - Text field
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
+    _cellValue = self.cell.textField.text;
+
     if (self.section.formManager.validateOnEdit || !self.isValide)
     {
         [self validate];

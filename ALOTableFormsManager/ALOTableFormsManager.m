@@ -31,6 +31,9 @@
         _tableView.dataSource = self;
         
         _mutableSections = [NSMutableArray new];
+
+        // default parameters
+        self.cellStyle = UITableViewCellStyleDefault;
     }
     return self;
 }
@@ -42,7 +45,6 @@
 }
 
 #pragma mark - Properties
-
 - (NSArray *)sections
 {
     return self.mutableSections;
@@ -96,6 +98,7 @@
     else if ([item isKindOfClass:[NSString class]])
     {
         ALOTableFormsItem *cellItem = [[ALOTableFormsItem alloc] initWithLabel:item];
+        cellItem.section = (ALOTableFormsSection*)self.sections[indexPath.section];
         return [cellItem cell];
     }
     else if ([item isKindOfClass:[ALOTableFormsItem class]])

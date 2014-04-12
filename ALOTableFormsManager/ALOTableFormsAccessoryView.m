@@ -1,14 +1,14 @@
 //
-//  ALOAccessoryView.m
+//  ALOTableFormsAccessoryView.m
 //  ALOTableFormsManagerExample
 //
 //  Created by Alexey Yachmenov on 12.04.14.
 //  Copyright (c) 2014 Alexey Yachmenov. All rights reserved.
 //
 
-#import "ALOAccessoryView.h"
+#import "ALOTableFormsAccessoryView.h"
 
-@implementation ALOAccessoryView
+@implementation ALOTableFormsAccessoryView
 
 - (id)initWithFrame:(CGRect)frame
 {

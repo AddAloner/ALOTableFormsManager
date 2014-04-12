@@ -11,15 +11,6 @@
 
 @implementation ALOTableFormsNumberField
 
--(id)init
-{
-    if (self = [super init])
-    {
-        self.cell.textField.keyboardType = UIKeyboardTypeNumberPad;
-    }
-    return self;
-}
-
 -(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSNumber *)value
 {
     if (self = [self initWithLabel:label placeholder:placeholder])
@@ -43,16 +34,30 @@
 }
 
 #pragma mark - Properties
+-(ALOTextFieldTableViewCell *)cell
+{
+    if (!_cell)
+    {
+        ALOTextFieldTableViewCell* cell = super.cell;
+        if (self.numberCellValue)
+            cell.textField.text = [self.numberCellValue stringValue];
+        cell.textField.keyboardType = UIKeyboardTypeNumberPad;
+    }
+    return _cell;
+}
+
+
 -(void)setNumberCellValue:(NSNumber *)numberCellValue
 {
     _numberCellValue = numberCellValue;
-    self.cell.textField.text = [numberCellValue stringValue];
+    if (_cell)
+        self.cell.textField.text = [numberCellValue stringValue];
 }
 
 #pragma mark - Text field
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    self.numberCellValue = [NSNumber numberWithInt:[self.cell.textField.text intValue]];
+    _numberCellValue = [NSNumber numberWithInt:[self.cell.textField.text intValue]];
     if (self.section.formManager.validateOnEdit || !self.isValide)
     {
         [self validate];

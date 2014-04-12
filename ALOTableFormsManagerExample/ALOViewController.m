@@ -47,7 +47,7 @@
     // simple text field
     [section addItem:[[ALOTableFormsTextField alloc] initWithLabel:@"String cell 1"
                                                        placeholder:@"text value"]];
-    
+
     // item with validate and other futures
     ALOTableFormsTextField *item2 = [[ALOTableFormsTextField alloc] initWithLabel:@"String cell 2"
                                                                       placeholder:@"required value"
@@ -71,7 +71,7 @@
                                                        placeholder: @"input date"
                                                              value:nil
                                                 changeValueHandler:^(NSDate *value) {
-                                                    NSLog(@"Switch cell value: %@", value.description);
+                                                    NSLog(@"Date cell value: %@", value.description);
                                                 }]];
     
     [manager addSection:section];

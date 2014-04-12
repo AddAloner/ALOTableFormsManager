@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 
 #import "ALOTableFormsSection.h"
-#import "ALOTableFormsNavigationBar.h"
+#import "ALOTableFormsAccessoryView.h"
 #import "ALOTableFormsTextField.h"
 #import "ALOTableFormsNumberField.h"
 #import "ALOTableFormsDateField.h"
@@ -20,6 +20,11 @@
 
 @property (nonatomic, strong, readonly) NSArray *sections;
 @property (nonatomic, weak) UITableView *tableView;
+
+// style
+@property (nonatomic, assign) UITableViewCellStyle cellStyle;
+
+@property (nonatomic, strong) ALOTableFormsAccessoryView *accessoryView;
 
 // default formatter for date inputs
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;

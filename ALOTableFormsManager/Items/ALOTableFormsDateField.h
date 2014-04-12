@@ -10,6 +10,9 @@
 
 @interface ALOTableFormsDateField : ALOTableFormsTextField
 
+-(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSDate *)value;
+-(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSDate *)value changeValueHandler:(void(^)(NSDate *value))changeValueHandler;
+
 @property (nonatomic, copy) NSDate *dateCellValue;
 @property (nonatomic, copy) NSString *cellValue __attribute__((unavailable));
 
@@ -24,8 +27,5 @@
 @property (nonatomic, assign) NSUInteger maxLength __attribute__((unavailable));
 @property (nonatomic, copy) NSDate *minDate;
 @property (nonatomic, copy) NSDate *maxDate;
-
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSDate *)value;
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSDate *)value changeValueHandler:(void(^)(NSDate *value))changeValueHandler;
 
 @end

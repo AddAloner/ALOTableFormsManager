@@ -11,20 +11,11 @@
 
 @implementation ALOTableFormsSwitch
 
-- (id)init
-{
-    if (self = [super init])
-    {
-        [self.cell.switcher addTarget:self action:@selector(onSwitchChanged) forControlEvents:UIControlEventValueChanged];
-    }
-    return self;
-}
-
 -(id)initWithLabel:(NSString *)label value:(BOOL)value
 {
     if (self = [self initWithLabel:label])
     {
-        [self.cell.switcher setOn:value];
+        _cellValue = value;
     }
     return self;
 }
@@ -40,6 +31,8 @@
 
 -(void)onSwitchChanged
 {
+    _cellValue = self.cell.switcher.isOn;
+    
     if (self.section.formManager.validateOnEdit)
     {
         [self validate];
@@ -49,14 +42,26 @@
         self.changeValueHandler(self.cellValue);
 }
 
+- (ALOSwitchTableViewCell *)formCell
+{
+    return self.cell;
+}
+
 #pragma mark - Property
 - (UITableViewCell *)cell
 {
-    if (!_cell)
+    if (!_cell && self.section.formManager)
     {
         ALOSwitchTableViewCell *cell = [[ALOSwitchTableViewCell alloc]
-                                        initWithStyle:UITableViewCellStyleDefault
+                                        initWithStyle:self.section.formManager.cellStyle
                                         reuseIdentifier:self.reuseId];
+        cell.textLabel.text = self.label;
+        [cell.switcher setOn:self.cellValue];
+        [cell.switcher addTarget:self
+                          action:@selector(onSwitchChanged)
+                forControlEvents:UIControlEventValueChanged];
+        
+        // disable textField cell selection
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         _cell = cell;
     }
@@ -68,14 +73,11 @@
     return @"textFieldTableFormsCell";
 }
 
--(BOOL)cellValue
-{
-    return self.cell.switcher.isOn;
-}
-
 -(void)setCellValue:(BOOL)cellValue
 {
-    [self.cell.switcher setOn:cellValue];
+    _cellValue = cellValue;
+    if (_cell)
+        [self.cell.switcher setOn:cellValue];
 }
 
 @end

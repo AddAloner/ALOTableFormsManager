@@ -12,8 +12,6 @@
 
 @interface ALOTableFormsItem ()
 
-extern NSString *const _reuseId;
-
 @end
 
 @implementation ALOTableFormsItem
@@ -31,7 +29,7 @@ extern NSString *const _reuseId;
 {
     if (self = [self init])
     {
-        self.cell.textLabel.text = label;
+        _label = label;
     }
     return self;
 }
@@ -39,10 +37,12 @@ extern NSString *const _reuseId;
 #pragma mark - Properties
 - (UITableViewCell *)cell
 {
-    if (!_cell)
+    // cell can initialized only include in section of formManager
+    if (!_cell && self.section.formManager)
     {
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:self.section.formManager.cellStyle
                                                        reuseIdentifier:self.reuseId];
+        cell.textLabel.text = self.label;
         _cell = cell;
     }
     
@@ -54,14 +54,11 @@ extern NSString *const _reuseId;
     return @"tableFormsCell";
 }
 
--(NSString *)label
-{
-    return self.cell.textLabel.text;
-}
-
 -(void)setLabel:(NSString *)label
 {
-    self.cell.textLabel.text = label;
+    _label = label;
+    if (_cell)
+        self.cell.textLabel.text = label;
 }
 
 -(UIColor *)invalideBackgroundColor

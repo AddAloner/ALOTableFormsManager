@@ -9,6 +9,13 @@
 #import "ALOTableFormsDateField.h"
 #import "ALOTableFormsManager.h"
 
+@interface ALOTableFormsDateField ()
+
+@property (nonatomic, strong, readonly) ALOTextFieldTableViewCell *cell;
+
+@end
+
+
 @implementation ALOTableFormsDateField
 
 - (id)init
@@ -16,9 +23,9 @@
     if (self = [super init])
     {
         UIDatePicker *picker = [UIDatePicker new];
-        [picker addTarget:self
-                   action:@selector(onDatePicked:)
-         forControlEvents:UIControlEventValueChanged];
+//        [picker addTarget:self
+//                   action:@selector(onDatePicked:)
+//         forControlEvents:UIControlEventValueChanged];
         _datePicker = picker;
     }
     return self;
@@ -28,16 +35,9 @@
 {
     if (self = [super initWithLabel:label placeholder:placeholder])
     {
-        if (value)
-        {
+        _dateCellValue = value;
+        if (value != nil)
             _datePicker.date = value;
-            if (self.dateFormatter)
-                self.cell.textField.text = [self.dateFormatter stringFromDate:value];
-            if (self.section.formManager.dateFormatter)
-                self.cell.textField.text = [self.section.formManager.dateFormatter stringFromDate:value];
-            else
-                self.cell.textField.text = value.description;
-        }
     }
     return self;
 }
@@ -56,15 +56,40 @@
 {
     if (!_cell)
     {
-        ALOTextFieldTableViewCell* cell = [super cell];
+        ALOTextFieldTableViewCell* cell = super.cell;
+        if (self.dateCellValue)
+            [self updateTextFieldWithDate:self.dateCellValue];
         cell.textField.inputView = self.datePicker;
     }
     return _cell;
 }
 
+-(void)updateTextFieldWithDate:(NSDate*)date
+{
+    if (self.dateCellValue)
+    {
+        _datePicker.date = date;
+        if (self.dateFormatter)
+            self.cell.textField.text = [self.dateFormatter stringFromDate:date];
+        if (self.section.formManager.dateFormatter)
+            self.cell.textField.text = [self.section.formManager.dateFormatter stringFromDate:date];
+        else
+            self.cell.textField.text = date.description;
+    }
+    else
+        self.cell.textField.text = @"";
+}
+
 -(NSString *)reuseId
 {
     return @"dateFieldTableFormsCell";
+}
+
+-(void)setDateCellValue:(NSDate *)dateCellValue
+{
+    _dateCellValue = dateCellValue;
+    if (dateCellValue != nil)
+        self.datePicker.date = dateCellValue;
 }
 
 - (NSDate *)minDate
@@ -87,26 +112,11 @@
     self.datePicker.maximumDate = maxDate;
 }
 
--(NSDate *)dateCellValue
+#pragma mark - Text field
+- (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    return self.datePicker.date;
-}
-
--(void)setDateCellValue:(NSDate *)dateCellValue
-{
-    self.datePicker.date = dateCellValue;
-}
-
-#pragma mark - DatePicker
--(void)onDatePicked:(UIButton*)button
-{
-    // update cell textField value
-    if (self.dateFormatter)
-        self.cell.textField.text = [self.dateFormatter stringFromDate:self.dateCellValue];
-    if (self.section.formManager.dateFormatter)
-        self.cell.textField.text = [self.section.formManager.dateFormatter stringFromDate:self.dateCellValue];
-    else
-        self.cell.textField.text = self.dateCellValue.description;
+    _dateCellValue = self.datePicker.date;
+    [self updateTextFieldWithDate:self.dateCellValue];
     
     if (self.section.formManager.validateOnEdit)
     {
@@ -115,6 +125,23 @@
     
     if (self.isValide && self.changeValueHandler)
         self.changeValueHandler(self.dateCellValue);
+}
+
+#pragma mark - DatePicker
+-(void)onDatePicked:(UIButton*)button
+{
+    /*
+    _dateCellValue = self.datePicker.date;
+    [self updateTextFieldWithDate:self.dateCellValue];
+
+    if (self.section.formManager.validateOnEdit)
+    {
+        [self validate];
+    }
+    
+    if (self.isValide && self.changeValueHandler)
+        self.changeValueHandler(self.dateCellValue);
+     */
 }
 
 @end

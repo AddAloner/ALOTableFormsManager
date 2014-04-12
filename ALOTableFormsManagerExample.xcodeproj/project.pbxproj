@@ -24,14 +24,13 @@
 		BD32EF4418EDFF13001C0F46 /* ALOTableFormsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD32EF4318EDFF13001C0F46 /* ALOTableFormsManager.m */; };
 		BDCC266918F1CAFD00AC9711 /* ALOTableFormsSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC266818F1CAFD00AC9711 /* ALOTableFormsSection.m */; };
 		BDCC267118F31E2C00AC9711 /* ALOTableFormsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC267018F31E2C00AC9711 /* ALOTableFormsTextField.m */; };
-		BDCC267418F320F600AC9711 /* ALOTableFormsNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC267318F320F600AC9711 /* ALOTableFormsNavigationBar.m */; };
 		BDCC267718F3213000AC9711 /* ALOTableFormsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC267618F3213000AC9711 /* ALOTableFormsItem.m */; };
 		BDCC267A18F45BA200AC9711 /* ALOTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC267918F45BA200AC9711 /* ALOTextFieldTableViewCell.m */; };
 		BDCC26BD18F5B93000AC9711 /* ALOSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26BC18F5B93000AC9711 /* ALOSwitchTableViewCell.m */; };
 		BDCC26C018F5B94A00AC9711 /* ALOTableFormsSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26BF18F5B94A00AC9711 /* ALOTableFormsSwitch.m */; };
 		BDCC26C618F726F600AC9711 /* ALOTableFormsDateField.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26C518F726F600AC9711 /* ALOTableFormsDateField.m */; };
 		BDCC26C918F7364A00AC9711 /* ALOTableFormsNumberField.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26C818F7364A00AC9711 /* ALOTableFormsNumberField.m */; };
-		BDCC26CC18F921A700AC9711 /* ALOAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26CB18F921A700AC9711 /* ALOAccessoryView.m */; };
+		BDCC26CC18F921A700AC9711 /* ALOTableFormsAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26CB18F921A700AC9711 /* ALOTableFormsAccessoryView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +69,6 @@
 		BDCC266818F1CAFD00AC9711 /* ALOTableFormsSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALOTableFormsSection.m; path = ALOTableFormsManager/ALOTableFormsSection.m; sourceTree = SOURCE_ROOT; };
 		BDCC266F18F31E2C00AC9711 /* ALOTableFormsTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALOTableFormsTextField.h; path = ALOTableFormsManager/Items/ALOTableFormsTextField.h; sourceTree = SOURCE_ROOT; };
 		BDCC267018F31E2C00AC9711 /* ALOTableFormsTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALOTableFormsTextField.m; path = ALOTableFormsManager/Items/ALOTableFormsTextField.m; sourceTree = SOURCE_ROOT; };
-		BDCC267218F320F600AC9711 /* ALOTableFormsNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALOTableFormsNavigationBar.h; path = ALOTableFormsManager/ALOTableFormsNavigationBar.h; sourceTree = SOURCE_ROOT; };
-		BDCC267318F320F600AC9711 /* ALOTableFormsNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALOTableFormsNavigationBar.m; path = ALOTableFormsManager/ALOTableFormsNavigationBar.m; sourceTree = SOURCE_ROOT; };
 		BDCC267518F3213000AC9711 /* ALOTableFormsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALOTableFormsItem.h; path = ALOTableFormsManager/ALOTableFormsItem.h; sourceTree = SOURCE_ROOT; };
 		BDCC267618F3213000AC9711 /* ALOTableFormsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALOTableFormsItem.m; path = ALOTableFormsManager/ALOTableFormsItem.m; sourceTree = SOURCE_ROOT; };
 		BDCC267818F45BA200AC9711 /* ALOTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALOTextFieldTableViewCell.h; path = ALOTableFormsManager/Cells/ALOTextFieldTableViewCell.h; sourceTree = SOURCE_ROOT; };
@@ -84,8 +81,8 @@
 		BDCC26C518F726F600AC9711 /* ALOTableFormsDateField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOTableFormsDateField.m; sourceTree = "<group>"; };
 		BDCC26C718F7364A00AC9711 /* ALOTableFormsNumberField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOTableFormsNumberField.h; sourceTree = "<group>"; };
 		BDCC26C818F7364A00AC9711 /* ALOTableFormsNumberField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOTableFormsNumberField.m; sourceTree = "<group>"; };
-		BDCC26CA18F921A700AC9711 /* ALOAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOAccessoryView.h; sourceTree = "<group>"; };
-		BDCC26CB18F921A700AC9711 /* ALOAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOAccessoryView.m; sourceTree = "<group>"; };
+		BDCC26CA18F921A700AC9711 /* ALOTableFormsAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOTableFormsAccessoryView.h; sourceTree = "<group>"; };
+		BDCC26CB18F921A700AC9711 /* ALOTableFormsAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOTableFormsAccessoryView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,14 +190,12 @@
 				BDCC266D18F31AAB00AC9711 /* Items */,
 				BD32EF4218EDFF13001C0F46 /* ALOTableFormsManager.h */,
 				BD32EF4318EDFF13001C0F46 /* ALOTableFormsManager.m */,
-				BDCC267218F320F600AC9711 /* ALOTableFormsNavigationBar.h */,
-				BDCC267318F320F600AC9711 /* ALOTableFormsNavigationBar.m */,
 				BDCC266718F1CAFD00AC9711 /* ALOTableFormsSection.h */,
 				BDCC266818F1CAFD00AC9711 /* ALOTableFormsSection.m */,
 				BDCC267518F3213000AC9711 /* ALOTableFormsItem.h */,
 				BDCC267618F3213000AC9711 /* ALOTableFormsItem.m */,
-				BDCC26CA18F921A700AC9711 /* ALOAccessoryView.h */,
-				BDCC26CB18F921A700AC9711 /* ALOAccessoryView.m */,
+				BDCC26CA18F921A700AC9711 /* ALOTableFormsAccessoryView.h */,
+				BDCC26CB18F921A700AC9711 /* ALOTableFormsAccessoryView.m */,
 			);
 			path = ALOTableFormsManager;
 			sourceTree = "<group>";
@@ -339,9 +334,8 @@
 				BDCC26C018F5B94A00AC9711 /* ALOTableFormsSwitch.m in Sources */,
 				BDCC26BD18F5B93000AC9711 /* ALOSwitchTableViewCell.m in Sources */,
 				BD32EF4418EDFF13001C0F46 /* ALOTableFormsManager.m in Sources */,
-				BDCC26CC18F921A700AC9711 /* ALOAccessoryView.m in Sources */,
+				BDCC26CC18F921A700AC9711 /* ALOTableFormsAccessoryView.m in Sources */,
 				BDCC267718F3213000AC9711 /* ALOTableFormsItem.m in Sources */,
-				BDCC267418F320F600AC9711 /* ALOTableFormsNavigationBar.m in Sources */,
 				BDCC26C618F726F600AC9711 /* ALOTableFormsDateField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,9 +11,14 @@
 
 @interface ALOTableFormsTextField : ALOTableFormsItem
 
+-(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder;
+-(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSString *)value;
+-(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSString *)value changeValueHandler:(void(^)(NSString *value))changeValueHandler;
+
+@property (nonatomic, strong, readonly) ALOTextFieldTableViewCell *cell;
+
 @property (nonatomic, copy) NSString *placeholder;
 @property (nonatomic, copy) NSString *cellValue;
-@property (nonatomic, strong, readonly) ALOTextFieldTableViewCell *cell;
 
 // handler
 @property (nonatomic, copy) void(^changeValueHandler)(NSString *value);
@@ -21,9 +26,5 @@
 // validation
 @property (nonatomic, assign) NSUInteger minLength;
 @property (nonatomic, assign) NSUInteger maxLength;
-
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder;
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSString *)value;
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSString *)value changeValueHandler:(void(^)(NSString *value))changeValueHandler;
 
 @end
