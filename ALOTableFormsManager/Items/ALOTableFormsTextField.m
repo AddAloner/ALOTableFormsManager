@@ -85,7 +85,7 @@
 #pragma mark - Text field
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    if (self.section.formManager.validateOnEdit)
+    if (self.section.formManager.validateOnEdit || !self.isValide)
     {
         [self validate];
     }

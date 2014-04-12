@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ALOAccessoryViewDelegate
+@end
+
+@protocol ALOAccessoryViewDataSource
+
+@required
+- (NSInteger)numberOfTextFields;
+- (UITextField*)fieldForRowAtIndex:(NSInteger)index;
+
+@end
+
 @interface ALOAccessoryView : UIToolbar
+
+@property (nonatomic, weak) id<ALOAccessoryViewDelegate> delegate;
+@property (nonatomic, weak) id<ALOAccessoryViewDataSource> dataSource;
 
 @end
