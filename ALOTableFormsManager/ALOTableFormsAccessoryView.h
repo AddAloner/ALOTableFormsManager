@@ -8,23 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@class ALOTableFormsAccessoryView;
+
 @protocol ALOTableFormsAccessoryViewDelegate
 
-@required
-- (void)didPressedDone;
-@end
-
-@protocol ALOTableFormsAccessoryViewDataSource
-
-@required
-- (NSInteger)numberOfTextFields;
-- (UITextField*)fieldForRowAtIndex:(NSInteger)index;
+@optional
+- (void)didPressedDoneButton:(UIBarButtonItem*)doneButton;
+- (void)accessoryView:(ALOTableFormsAccessoryView*)view didPressedPreviousButton:(UIBarButtonItem*)previousButton;
+- (void)accessoryView:(ALOTableFormsAccessoryView*)view didPressedNextButton:(UIBarButtonItem*)nextButton;
 
 @end
 
 @interface ALOTableFormsAccessoryView : UIToolbar
 
-@property (nonatomic, weak) id<ALOTableFormsAccessoryViewDelegate> delegate;
-@property (nonatomic, weak) id<ALOTableFormsAccessoryViewDataSource> dataSource;
+- (id)initWithDelegate:(id<ALOTableFormsAccessoryViewDelegate>)delegate;
+
+@property (nonatomic, strong, readonly) UIBarButtonItem *nextButton;
+@property (nonatomic, strong, readonly) UIBarButtonItem *previousButton;
+@property (nonatomic, weak) id actionDelegate;
 
 @end

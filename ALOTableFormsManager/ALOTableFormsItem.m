@@ -10,7 +10,7 @@
 #import "ALOTableFormsSection.h"
 #import "ALOTableFormsManager.h"
 
-@interface ALOTableFormsItem ()
+@interface ALOTableFormsItem () <ALOTableFormsAccessoryViewDelegate>
 
 @end
 
@@ -52,6 +52,75 @@
 -(NSString *)reuseId
 {
     return @"tableFormsCell";
+}
+
+#pragma mark - Accessory View
+- (void)didPressedDoneButton:(UIBarButtonItem *)doneButton
+{
+}
+
+-(void)accessoryView:(ALOTableFormsAccessoryView *)view didPressedPreviousButton:(UIBarButtonItem *)previousButton
+{
+    [[self previousEditingField] cellWillEditing];
+}
+
+-(void)accessoryView:(ALOTableFormsAccessoryView *)view didPressedNextButton:(UIBarButtonItem *)nextButton
+{
+    [[self nextEditingField] cellWillEditing];
+}
+
+- (void)cellWillEditing
+{
+    [self cellDidEditing];
+}
+
+- (void)cellDidEditing
+{
+    self.section.formManager.accessoryView.actionDelegate = self;
+    [self.section.formManager.accessoryView.nextButton setEnabled:([self nextEditingField] != nil)];
+    [self.section.formManager.accessoryView.previousButton setEnabled:([self previousEditingField] != nil)];
+}
+
+- (id)previousEditingField
+{
+    ALOTableFormsManager *formManager = self.section.formManager;
+    NSInteger selectedSectionIndex = [formManager.sections indexOfObject:self.section];
+    NSInteger selectedItemIndex = [self.section.items indexOfObject:self];
+    for (NSInteger i = selectedSectionIndex; i >= 0; i--)
+    {
+        ALOTableFormsSection *section = formManager.sections[i];
+        for (NSInteger j = (i == selectedSectionIndex) ? selectedItemIndex - 1 : section.items.count - 1; j >= 0; j--)
+        {
+            if ([section.items[j] isKindOfClass:[ALOTableFormsItem class]] &&
+                [section.items[j] hasAccessoryNavigation])
+                return section.items[j];
+        }
+    }
+    return nil;
+}
+
+- (id)nextEditingField
+{
+    ALOTableFormsManager *formManager = self.section.formManager;
+    NSInteger selectedSectionIndex = [formManager.sections indexOfObject:self.section];
+    NSInteger selectedItemIndex = [self.section.items indexOfObject:self];
+    for (NSInteger i = selectedSectionIndex; i < formManager.sections.count; i++)
+    {
+        ALOTableFormsSection *section = formManager.sections[i];
+        for (NSInteger j = (i == selectedSectionIndex) ? selectedItemIndex + 1 : 0; j < section.items.count; j++)
+        {
+            id item = section.items[j];
+            if ([section.items[j] isKindOfClass:[ALOTableFormsItem class]] &&
+                [item hasAccessoryNavigation])
+                return section.items[j];
+        }
+    }
+    return nil;
+}
+
+-(BOOL)hasAccessoryNavigation
+{
+    return NO;
 }
 
 -(void)setLabel:(NSString *)label

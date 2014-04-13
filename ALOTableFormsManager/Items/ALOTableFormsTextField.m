@@ -56,6 +56,7 @@
 
         // disable textField cell selection
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.textField.inputAccessoryView = self.section.formManager.accessoryView;
         cell.textField.delegate = self;
         _cell = cell;
     }
@@ -81,6 +82,17 @@
         self.cell.textField.text = cellValue;
 }
 
+#pragma mark - Accessory View
+-(BOOL)hasAccessoryNavigation
+{
+    return YES;
+}
+
+-(void)cellWillEditing
+{
+    [self.cell.textField becomeFirstResponder];
+}
+
 #pragma mark - Text field
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
@@ -99,6 +111,18 @@
 {
     [textField resignFirstResponder];
     return NO;
+}
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    [self cellDidEditing];
+    return YES;
+}
+
+#pragma mark - Accessory View
+- (void)didPressedDoneButton:(UIBarButtonItem *)doneButton
+{
+    [self.cell.textField resignFirstResponder];
 }
 
 #pragma mark - Validate

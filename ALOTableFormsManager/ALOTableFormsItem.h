@@ -35,4 +35,11 @@
 - (BOOL)validate;
 - (void)updateCellWithValidationState;
 
+// navigation
+@property (nonatomic, readonly) BOOL hasAccessoryNavigation;
+- (id)previousEditingField;
+- (id)nextEditingField;
+- (void)cellWillEditing;
+- (void)cellDidEditing;
+
 @end

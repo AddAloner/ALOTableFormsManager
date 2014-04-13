@@ -8,7 +8,7 @@
 
 #import "ALOTableFormsManager.h"
 
-@interface ALOTableFormsManager ()
+@interface ALOTableFormsManager () <ALOTableFormsAccessoryViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *mutableSections;
 
@@ -34,6 +34,9 @@
 
         // default parameters
         self.cellStyle = UITableViewCellStyleDefault;
+        
+        // init accessory view
+        self.accessoryView = [ALOTableFormsAccessoryView new];
     }
     return self;
 }
@@ -114,5 +117,7 @@
 {
     return 44;
 }
+
+#pragma mark - AccessoryView datasource
 
 @end
