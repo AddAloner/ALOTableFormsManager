@@ -15,6 +15,7 @@
 #import "ALOTableFormsNumberField.h"
 #import "ALOTableFormsDateField.h"
 #import "ALOTableFormsSwitch.h"
+#import "ALOTableFormsListPicker.h"
 
 @interface ALOTableFormsManager : NSObject <UITableViewDelegate, UITableViewDataSource>
 
