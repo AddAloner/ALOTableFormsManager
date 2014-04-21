@@ -11,8 +11,6 @@
 
 @interface ALOViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @property (nonatomic, strong) ALOTableFormsManager *manager;
 
 @end

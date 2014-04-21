@@ -23,9 +23,9 @@
     if (self = [super init])
     {
         UIDatePicker *picker = [UIDatePicker new];
-//        [picker addTarget:self
-//                   action:@selector(onDatePicked:)
-//         forControlEvents:UIControlEventValueChanged];
+        [picker addTarget:self
+                   action:@selector(onDatePicked:)
+         forControlEvents:UIControlEventValueChanged];
         _datePicker = picker;
     }
     return self;
@@ -115,12 +115,6 @@
 #pragma mark - Text field
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    // not use for datePicker
-}
-
-#pragma mark - DatePicker
-- (void)didPressedDoneButton:(UIBarButtonItem *)doneButton
-{
     _dateCellValue = self.datePicker.date;
     [self updateTextFieldWithDate:self.dateCellValue];
     
@@ -131,8 +125,13 @@
     
     if (self.isValide && self.changeValueHandler)
         self.changeValueHandler(self.dateCellValue);
-    
-    [self.cell.textField resignFirstResponder];
+}
+
+#pragma mark - DatePicker
+-(void)onDatePicked:(UIButton*)button
+{
+    _dateCellValue = self.datePicker.date;
+    [self updateTextFieldWithDate:self.dateCellValue];
 }
 
 @end

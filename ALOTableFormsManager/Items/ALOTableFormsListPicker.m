@@ -134,14 +134,7 @@
 }
 
 #pragma mark - Text field
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-{
-    [self cellDidEditing];
-    return YES;
-}
-
-#pragma mark - Accessory View
-- (void)didPressedDoneButton:(UIBarButtonItem *)doneButton
+- (void)textFieldDidEndEditing:(UITextField *)textField
 {
     // get selected value from picker
     self.cellValue = [self.values allKeys][[self.picker selectedRowInComponent:0]];
@@ -152,7 +145,17 @@
     }
     if (self.isValide && self.changeValueHandler)
         self.changeValueHandler(self.cellValue);
-    
+}
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    [self cellDidEditing];
+    return YES;
+}
+
+#pragma mark - Accessory View
+- (void)didPressedDoneButton:(UIBarButtonItem *)doneButton
+{
     [self.cell.textField resignFirstResponder];
 }
 
@@ -173,9 +176,9 @@
 }
 
 #pragma mark PickerView Delegate
-//- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-//{
-//    self.cellValue = [self.values allKeys][row];
-//}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    self.cellValue = [self.values allKeys][row];
+}
 
 @end

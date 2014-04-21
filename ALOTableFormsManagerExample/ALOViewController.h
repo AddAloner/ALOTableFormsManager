@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALOViewController : UIViewController
+@interface ALOViewController : UITableViewController
 
 @end
