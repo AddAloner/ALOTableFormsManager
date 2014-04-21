@@ -79,8 +79,8 @@
                                                         placeholder:@"select item"
                                                              values:@{@"1": @"First item",
                                                                       @"2": @"Second item",
-                                                                      @"2": @"Third item",
-                                                                      @"2": @"Last item",
+                                                                      @"3": @"Third item",
+                                                                      @"4": @"Last item",
                                                                       }
                                                               value:nil
                                                  changeValueHandler:^(NSString *value) {

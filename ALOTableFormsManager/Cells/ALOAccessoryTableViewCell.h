@@ -10,4 +10,6 @@
 
 @interface ALOAccessoryTableViewCell : UITableViewCell
 
+@property (nonatomic, strong, readonly) UITextField *textField;
+
 @end
