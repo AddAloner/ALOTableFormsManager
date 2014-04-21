@@ -74,6 +74,19 @@
                                                     NSLog(@"Date cell value: %@", value.description);
                                                 }]];
     
+    // list picker item with cellback
+    [section addItem:[[ALOTableFormsListPicker alloc] initWithLabel:@"List cell"
+                                                        placeholder:@"select item"
+                                                             values:@{@"1": @"First item",
+                                                                      @"2": @"Second item",
+                                                                      @"3": @"Third item",
+                                                                      @"4": @"Last item",
+                                                                      }
+                                                              value:nil
+                                                 changeValueHandler:^(NSString *value) {
+                                                     NSLog(@"List cell value: %@", value);
+                                                 }]];
+    
     [manager addSection:section];
     self.manager = manager;
 }

@@ -31,6 +31,8 @@
 		BDCC26C618F726F600AC9711 /* ALOTableFormsDateField.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26C518F726F600AC9711 /* ALOTableFormsDateField.m */; };
 		BDCC26C918F7364A00AC9711 /* ALOTableFormsNumberField.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26C818F7364A00AC9711 /* ALOTableFormsNumberField.m */; };
 		BDCC26CC18F921A700AC9711 /* ALOTableFormsAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC26CB18F921A700AC9711 /* ALOTableFormsAccessoryView.m */; };
+		BDCD47D9190062C300B8D42A /* ALOTableFormsListPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCD47D8190062C300B8D42A /* ALOTableFormsListPicker.m */; };
+		BDCD47DC1900678900B8D42A /* ALOAccessoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCD47DB1900678900B8D42A /* ALOAccessoryTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,10 @@
 		BDCC26C818F7364A00AC9711 /* ALOTableFormsNumberField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOTableFormsNumberField.m; sourceTree = "<group>"; };
 		BDCC26CA18F921A700AC9711 /* ALOTableFormsAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOTableFormsAccessoryView.h; sourceTree = "<group>"; };
 		BDCC26CB18F921A700AC9711 /* ALOTableFormsAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOTableFormsAccessoryView.m; sourceTree = "<group>"; };
+		BDCD47D7190062C300B8D42A /* ALOTableFormsListPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOTableFormsListPicker.h; sourceTree = "<group>"; };
+		BDCD47D8190062C300B8D42A /* ALOTableFormsListPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOTableFormsListPicker.m; sourceTree = "<group>"; };
+		BDCD47DA1900678900B8D42A /* ALOAccessoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOAccessoryTableViewCell.h; sourceTree = "<group>"; };
+		BDCD47DB1900678900B8D42A /* ALOAccessoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOAccessoryTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +217,8 @@
 				BDCC26C518F726F600AC9711 /* ALOTableFormsDateField.m */,
 				BDCC26C718F7364A00AC9711 /* ALOTableFormsNumberField.h */,
 				BDCC26C818F7364A00AC9711 /* ALOTableFormsNumberField.m */,
+				BDCD47D7190062C300B8D42A /* ALOTableFormsListPicker.h */,
+				BDCD47D8190062C300B8D42A /* ALOTableFormsListPicker.m */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -222,6 +230,8 @@
 				BDCC267918F45BA200AC9711 /* ALOTextFieldTableViewCell.m */,
 				BDCC26BB18F5B93000AC9711 /* ALOSwitchTableViewCell.h */,
 				BDCC26BC18F5B93000AC9711 /* ALOSwitchTableViewCell.m */,
+				BDCD47DA1900678900B8D42A /* ALOAccessoryTableViewCell.h */,
+				BDCD47DB1900678900B8D42A /* ALOAccessoryTableViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -325,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD32EF1918EDFD30001C0F46 /* main.m in Sources */,
+				BDCD47D9190062C300B8D42A /* ALOTableFormsListPicker.m in Sources */,
 				BD32EF2318EDFD30001C0F46 /* ALOViewController.m in Sources */,
 				BD32EF1D18EDFD30001C0F46 /* ALOAppDelegate.m in Sources */,
 				BDCC267118F31E2C00AC9711 /* ALOTableFormsTextField.m in Sources */,
@@ -334,6 +345,7 @@
 				BDCC26C018F5B94A00AC9711 /* ALOTableFormsSwitch.m in Sources */,
 				BDCC26BD18F5B93000AC9711 /* ALOSwitchTableViewCell.m in Sources */,
 				BD32EF4418EDFF13001C0F46 /* ALOTableFormsManager.m in Sources */,
+				BDCD47DC1900678900B8D42A /* ALOAccessoryTableViewCell.m in Sources */,
 				BDCC26CC18F921A700AC9711 /* ALOTableFormsAccessoryView.m in Sources */,
 				BDCC267718F3213000AC9711 /* ALOTableFormsItem.m in Sources */,
 				BDCC26C618F726F600AC9711 /* ALOTableFormsDateField.m in Sources */,
