@@ -115,25 +115,15 @@
 #pragma mark - Text field
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    _dateCellValue = self.datePicker.date;
-    [self updateTextFieldWithDate:self.dateCellValue];
-    
-    if (self.section.formManager.validateOnEdit)
-    {
-        [self validate];
-    }
-    
-    if (self.isValide && self.changeValueHandler)
-        self.changeValueHandler(self.dateCellValue);
+    // not use for datePicker
 }
 
 #pragma mark - DatePicker
--(void)onDatePicked:(UIButton*)button
+- (void)didPressedDoneButton:(UIBarButtonItem *)doneButton
 {
-    /*
     _dateCellValue = self.datePicker.date;
     [self updateTextFieldWithDate:self.dateCellValue];
-
+    
     if (self.section.formManager.validateOnEdit)
     {
         [self validate];
@@ -141,7 +131,8 @@
     
     if (self.isValide && self.changeValueHandler)
         self.changeValueHandler(self.dateCellValue);
-     */
+    
+    [self.cell.textField resignFirstResponder];
 }
 
 @end
