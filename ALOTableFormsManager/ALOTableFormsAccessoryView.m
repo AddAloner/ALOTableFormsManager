@@ -11,7 +11,7 @@
 @implementation ALOTableFormsAccessoryView
 
 // back/forward buttons space
-static NSInteger buttonsSpaceWidth = 10.f;
+static NSInteger buttonsSpaceWidth = 30.f;
 
 - (id)init
 {
