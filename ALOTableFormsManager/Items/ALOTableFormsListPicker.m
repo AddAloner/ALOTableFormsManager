@@ -11,6 +11,8 @@
 
 @interface ALOTableFormsListPicker () <UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
+@property (nonatomic) NSArray *sortedValues;
+
 @end
 
 @implementation ALOTableFormsListPicker
@@ -41,6 +43,7 @@
     if (self = [self initWithLabel:label placeholder:placeholder])
     {
         _values = values;
+        [self makeSortedValues];
     }
     return self;
 }
@@ -115,6 +118,18 @@
     }
 }
 
+-(void)setValues:(NSDictionary *)values
+{
+    _values = values;
+    [self makeSortedValues];
+}
+
+-(void)makeSortedValues
+{
+    // TODO change on sorted by dictionary position
+    self.sortedValues = [[self.values allValues] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+}
+
 #pragma mark - Accessory View
 -(BOOL)hasAccessoryNavigation
 {
@@ -123,13 +138,6 @@
 
 -(void)cellWillEditing
 {
-    if (self.cellValue)
-    {
-        NSUInteger selectedIndex = [[self.values allKeys] indexOfObject:self.cellValue];
-        if (selectedIndex != NSNotFound)
-            [self.picker selectRow:selectedIndex inComponent:0 animated:NO];
-    }
-    
     [self.cell.textField becomeFirstResponder];
 }
 
@@ -137,7 +145,7 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     // get selected value from picker
-    self.cellValue = [self.values allKeys][[self.picker selectedRowInComponent:0]];
+    self.cellValue = [[self.values allKeysForObject:self.sortedValues[[self.picker selectedRowInComponent:0]]] lastObject];
     
     if (self.section.formManager.validateOnEdit || !self.isValide)
     {
@@ -149,6 +157,12 @@
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
+    if (self.cellValue)
+    {
+        NSUInteger selectedIndex = [self.sortedValues indexOfObject:[self.values objectForKey:self.cellValue]];
+        if (selectedIndex != NSNotFound)
+            [self.picker selectRow:selectedIndex inComponent:0 animated:NO];
+    }
     [self cellDidEditing];
     return YES;
 }
@@ -172,13 +186,13 @@
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return [self.values allValues][row];
+    return self.sortedValues[row];
 }
 
 #pragma mark PickerView Delegate
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    self.cellValue = [self.values allKeys][row];
+    self.cellValue = [[self.values allKeysForObject:self.sortedValues[row]] lastObject];
 }
 
 @end
