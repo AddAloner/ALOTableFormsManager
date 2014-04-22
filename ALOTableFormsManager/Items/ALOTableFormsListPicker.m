@@ -76,7 +76,7 @@
         if (self.cellValue)
         {
             // TODO set color for placeholder
-            cell.detailTextLabel.text = self.cellValue;
+            cell.detailTextLabel.text = [self.values objectForKey:self.cellValue];
         }
         else if (self.placeholder)
         {

@@ -44,4 +44,5 @@
 - (void)removeSectionAtIndex:(NSUInteger)index;
 - (void)removeAllSections;
 
+- (BOOL)validate;
 @end

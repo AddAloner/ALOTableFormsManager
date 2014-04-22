@@ -77,6 +77,12 @@
     [self.mutableSections removeAllObjects];
 }
 
+#pragma mark - Validation
+- (BOOL)validate
+{
+    return YES;
+}
+
 #pragma mark - TableView dataSource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
