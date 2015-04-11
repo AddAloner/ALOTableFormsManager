@@ -11,10 +11,10 @@
 
 @interface ALOTableFormsListPicker : ALOTableFormsItem
 
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder;
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder values:(NSDictionary*)values;
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder values:(NSDictionary*)values value:(NSString *)value;
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder values:(NSDictionary*)values value:(NSString *)value changeValueHandler:(void(^)(NSString *value))changeValueHandler;
+- (instancetype)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder;
+- (instancetype)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder values:(NSDictionary*)values;
+- (instancetype)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder values:(NSDictionary*)values value:(NSString *)value;
+- (instancetype)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder values:(NSDictionary*)values value:(NSString *)value changeValueHandler:(void(^)(NSString *value))changeValueHandler;
 
 @property (nonatomic, strong, readonly) ALOAccessoryTableViewCell *cell;
 

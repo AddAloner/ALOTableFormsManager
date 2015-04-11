@@ -15,38 +15,35 @@
 
 @implementation ALOTableFormsTextField
 
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder
+- (instancetype)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder
 {
-    if (self = [self initWithLabel:label])
-    {
+    if (self = [self initWithLabel:label]) {
         _placeholder = placeholder;
     }
     return self;
 }
 
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSString *)value
+- (instancetype)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSString *)value
 {
-    if (self = [self initWithLabel:label placeholder:placeholder])
-    {
+    if (self = [self initWithLabel:label placeholder:placeholder]) {
         _cellValue = value;
     }
     return self;
 }
 
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSString *)value changeValueHandler:(void (^)(NSString *))changeValueHandler
+- (instancetype)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSString *)value changeValueHandler:(void (^)(NSString *))changeValueHandler
 {
-    if (self = [self initWithLabel:label placeholder:placeholder value:value])
-    {
+    if (self = [self initWithLabel:label placeholder:placeholder value:value]) {
         self.changeValueHandler = changeValueHandler;
     }
     return self;
 }
 
 #pragma mark - Properties
+
 -(ALOTextFieldTableViewCell *)cell
 {
-    if (!_cell && self.section.formManager)
-    {
+    if (!_cell && self.section.formManager) {
         ALOTextFieldTableViewCell *cell = [[ALOTextFieldTableViewCell alloc]
                                            initWithStyle:self.section.formManager.cellStyle
                                            reuseIdentifier:self.reuseId];
@@ -54,7 +51,6 @@
         cell.textField.placeholder = self.placeholder;
         cell.textField.text = self.cellValue ? self.cellValue : @"";
 
-        // disable textField cell selection
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textField.inputAccessoryView = self.section.formManager.accessoryView;
         cell.textField.delegate = self;
@@ -63,48 +59,52 @@
     return _cell;
 }
 
--(NSString *)reuseId
+- (NSString *)reuseId
 {
-    return @"textFieldTableFormsCell";
+    return NSStringFromClass([ALOTextFieldTableViewCell class]);
 }
 
--(void)setPlaceholder:(NSString *)placeholder
+- (void)setPlaceholder:(NSString *)placeholder
 {
     _placeholder = placeholder;
-    if (_cell)
+    if (_cell) {
         self.cell.textField.placeholder = placeholder;
+    }
 }
 
--(void)setCellValue:(NSString *)cellValue
+- (void)setCellValue:(NSString *)cellValue
 {
     _cellValue = cellValue;
-    if (_cell)
+    if (_cell) {
         self.cell.textField.text = cellValue;
+    }
 }
 
 #pragma mark - Accessory View
--(BOOL)hasAccessoryNavigation
+
+- (BOOL)hasAccessoryNavigation
 {
     return YES;
 }
 
--(void)cellWillEditing
+- (void)cellWillEditing
 {
     [self.cell.textField becomeFirstResponder];
 }
 
 #pragma mark - Text field
+
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     _cellValue = self.cell.textField.text;
 
-    if (self.section.formManager.validateOnEdit || !self.isValide)
-    {
+    if (self.section.formManager.validateOnEdit || !self.isValide) {
         [self validate];
     }
         
-    if (self.isValide && self.changeValueHandler)
+    if (self.isValide && self.changeValueHandler) {
         self.changeValueHandler(self.cellValue);
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -120,32 +120,35 @@
 }
 
 #pragma mark - Accessory View
+
 - (void)didPressedDoneButton:(UIBarButtonItem *)doneButton
 {
     [self.cell.textField resignFirstResponder];
 }
 
 #pragma mark - Validate
+
 - (BOOL)validate
 {
-    if (self.isRequred && [self.cellValue isEqual:@""])
-    {
+    if (self.isRequred && [self.cellValue isEqual:@""]) {
+        
         self.error = [NSString stringWithFormat:NSLocalizedString(@"Field \"%@\" is required", @""), self.label];
-        self.isValide = false;
-    }
-    else if (self.minLength > 0 && self.cellValue.length < self.minLength)
-    {
+        self.isValide = NO;
+        
+    } else if (self.minLength > 0 && self.cellValue.length < self.minLength) {
+        
         self.error = [NSString stringWithFormat:NSLocalizedString(@"Min length for %@ is %i", @""), self.label, self.minLength];
-        self.isValide = false;
-    }
-    else if (self.maxLength > 0 && self.cellValue.length > self.maxLength)
-    {
+        self.isValide = NO;
+        
+    } else if (self.maxLength > 0 && self.cellValue.length > self.maxLength) {
+        
         self.error = [NSString stringWithFormat:NSLocalizedString(@"Max length for %@ is %i", @""), self.label, self.maxLength];
-        self.isValide = false;
-    }
-    else
-    {
-        self.isValide = true;
+        self.isValide = NO;
+        
+    } else {
+        
+        self.isValide = YES;
+        
     }
     return self.isValide;
 }

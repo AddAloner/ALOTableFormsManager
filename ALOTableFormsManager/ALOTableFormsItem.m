@@ -18,8 +18,7 @@
 
 -(id)init
 {
-    if (self = [super init])
-    {
+    if (self = [super init]) {
         _isValide = YES;
     }
     return self;
@@ -27,14 +26,14 @@
 
 -(id)initWithLabel:(NSString *)label
 {
-    if (self = [self init])
-    {
+    if (self = [self init]) {
         _label = label;
     }
     return self;
 }
 
 #pragma mark - Properties
+
 - (UITableViewCell *)cell
 {
     // cell can initialized only include in section of formManager
@@ -51,20 +50,21 @@
 
 -(NSString *)reuseId
 {
-    return @"tableFormsCell";
+    return NSStringFromClass([UITableViewCell class]);
 }
 
 #pragma mark - Accessory View
+
 - (void)didPressedDoneButton:(UIBarButtonItem *)doneButton
 {
 }
 
--(void)accessoryView:(ALOTableFormsAccessoryView *)view didPressedPreviousButton:(UIBarButtonItem *)previousButton
+- (void)accessoryView:(ALOTableFormsAccessoryView *)view didPressedPreviousButton:(UIBarButtonItem *)previousButton
 {
     [[self previousEditingField] cellWillEditing];
 }
 
--(void)accessoryView:(ALOTableFormsAccessoryView *)view didPressedNextButton:(UIBarButtonItem *)nextButton
+- (void)accessoryView:(ALOTableFormsAccessoryView *)view didPressedNextButton:(UIBarButtonItem *)nextButton
 {
     [[self nextEditingField] cellWillEditing];
 }
@@ -132,18 +132,20 @@
 
 -(UIColor *)invalideBackgroundColor
 {
-    if (!_invalideBackgroundColor)
+    if (!_invalideBackgroundColor) {
+        // TODO: move to item invalide color
         _invalideBackgroundColor = [UIColor colorWithRed:1.f green:0.9f blue:0.9f alpha:1.f];
+    }
     
     return _invalideBackgroundColor;
 }
 
--(BOOL)isValide
+- (BOOL)isValide
 {
     return _isValide;
 }
 
--(void)setIsValide:(BOOL)isValide
+- (void)setIsValide:(BOOL)isValide
 {
     if (_isValide != isValide)
     {
@@ -153,19 +155,17 @@
 }
 
 #pragma mark - Validate
--(BOOL)validate
+
+- (BOOL)validate
 {
     return YES;
 }
 
--(void)updateCellWithValidationState
+- (void)updateCellWithValidationState
 {
-    if (!_isValide)
-    {
+    if (!_isValide) {
         self.cell.backgroundColor = self.invalideBackgroundColor;
-    }
-    else
-    {
+    } else {
         // TODO: change on default cell color
         self.cell.backgroundColor = [UIColor whiteColor];
         self.error = nil;

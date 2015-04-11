@@ -10,29 +10,29 @@
 	<string>ALOTableFormsManagerExample</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>AC940461-44FE-4C8B-BC85-0E0BA19645CF</key>
+		<key>269DA014FA4B94E62A8FB8B8629E2F01413B67E3</key>
 		<string>https://github.com/AddAloner/ALOTableFormsManager.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ALOTableFormsManagerExample.xcodeproj/project.xcworkspace</string>
+	<string>ALOTableFormsManagerExample.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>AC940461-44FE-4C8B-BC85-0E0BA19645CF</key>
+		<key>269DA014FA4B94E62A8FB8B8629E2F01413B67E3</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/AddAloner/ALOTableFormsManager.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>AC940461-44FE-4C8B-BC85-0E0BA19645CF</string>
+	<string>269DA014FA4B94E62A8FB8B8629E2F01413B67E3</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>AC940461-44FE-4C8B-BC85-0E0BA19645CF</string>
+			<string>269DA014FA4B94E62A8FB8B8629E2F01413B67E3</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ALOTableFormManager</string>
 		</dict>

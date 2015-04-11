@@ -11,9 +11,9 @@
 
 @interface ALOTableFormsTextField : ALOTableFormsItem
 
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder;
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSString *)value;
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSString *)value changeValueHandler:(void(^)(NSString *value))changeValueHandler;
+- (instancetype)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder;
+- (instancetype)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSString *)value;
+- (instancetype)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSString *)value changeValueHandler:(void(^)(NSString *value))changeValueHandler;
 
 @property (nonatomic, strong, readonly) ALOTextFieldTableViewCell *cell;
 

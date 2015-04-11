@@ -22,7 +22,7 @@
 @property (nonatomic, copy) NSNumber *minValue;
 @property (nonatomic, copy) NSNumber *maxValue;
 
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSNumber *)value;
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSNumber *)value changeValueHandler:(void(^)(NSNumber *value))changeValueHandler;
+- (instancetype)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSNumber *)value;
+- (instancetype)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSNumber *)value changeValueHandler:(void(^)(NSNumber *value))changeValueHandler;
 
 @end

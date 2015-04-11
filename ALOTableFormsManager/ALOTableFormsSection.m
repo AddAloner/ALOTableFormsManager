@@ -20,40 +20,43 @@
 
 -(id)init
 {
-    if (self = [super init])
-    {
+    if (self = [super init]) {
         _mutableItems = [NSMutableArray new];
     }
     return self;
 }
 
 #pragma mark - Properties
+
 - (NSArray *)items
 {
     return self.mutableItems;
 }
 
 #pragma mark - Sections
+
 - (void)addItem:(id)item
 {
-    if ([item isKindOfClass:[ALOTableFormsItem class]])
+    if ([item isKindOfClass:[ALOTableFormsItem class]]) {
         ((ALOTableFormsItem*)item).section = self;
+    }
     [self.mutableItems addObject:item];
 }
 
--(void)addItem:(id)item atIndex:(NSUInteger)index
+- (void)addItem:(id)item atIndex:(NSUInteger)index
 {
-    if ([item isKindOfClass:[ALOTableFormsItem class]])
+    if ([item isKindOfClass:[ALOTableFormsItem class]]) {
         ((ALOTableFormsItem*)item).section = self;
+    }
     [self.mutableItems insertObject:item atIndex:index];
 }
 
--(void)removeItemAtIndex:(NSUInteger)index
+- (void)removeItemAtIndex:(NSUInteger)index
 {
     [self.mutableItems removeObjectAtIndex:index];
 }
 
--(void)removeAllItems
+- (void)removeAllItems
 {
     [self.mutableItems removeAllObjects];
 }

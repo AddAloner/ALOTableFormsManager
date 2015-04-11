@@ -48,6 +48,7 @@
 }
 
 #pragma mark - Properties
+
 - (NSArray *)sections
 {
     return self.mutableSections;
@@ -67,7 +68,7 @@
     [self.mutableSections insertObject:section atIndex:index];
 }
 
--(void)removeSectionAtIndex:(NSUInteger)index
+- (void)removeSectionAtIndex:(NSUInteger)index
 {
     [self.mutableSections removeObjectAtIndex:index];
 }
@@ -78,20 +79,21 @@
 }
 
 #pragma mark - Validation
+
 - (BOOL)validate
 {
     return YES;
 }
 
-#pragma mark - TableView dataSource
+#pragma mark - TableView DataSource
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // in first version will be only one section
     return self.sections.count;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return ((ALOTableFormsSection*)self.sections[section]).items.count;
 }
@@ -100,30 +102,28 @@
 {
     id item = ((ALOTableFormsSection*)self.sections[indexPath.section]).items[indexPath.row];
     
-    if ([item isKindOfClass:[UITableViewCell class]])
-    {
+    if ([item isKindOfClass:[UITableViewCell class]]) {
         return item;
     }
-    else if ([item isKindOfClass:[NSString class]])
-    {
+    
+    else if ([item isKindOfClass:[NSString class]]) {
         ALOTableFormsItem *cellItem = [[ALOTableFormsItem alloc] initWithLabel:item];
         cellItem.section = (ALOTableFormsSection*)self.sections[indexPath.section];
         return [cellItem cell];
-    }
-    else if ([item isKindOfClass:[ALOTableFormsItem class]])
-    {
+    } else if ([item isKindOfClass:[ALOTableFormsItem class]]) {
         return [item cell];
     }
     
     return nil;
 }
 
-#pragma mark - TableView delegate
+#pragma mark - TableView Delegate
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 44;
 }
 
-#pragma mark - AccessoryView datasource
+#pragma mark - AccessoryView DataSource
 
 @end

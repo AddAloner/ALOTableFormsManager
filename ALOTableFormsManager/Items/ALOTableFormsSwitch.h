@@ -11,8 +11,8 @@
 
 @interface ALOTableFormsSwitch : ALOTableFormsItem
 
--(id)initWithLabel:(NSString *)label value:(BOOL)value;
--(id)initWithLabel:(NSString *)label value:(BOOL)value changeValueHandler:(void(^)(BOOL value))changeValueHandler;
+- (instancetype)initWithLabel:(NSString *)label value:(BOOL)value;
+- (instancetype)initWithLabel:(NSString *)label value:(BOOL)value changeValueHandler:(void(^)(BOOL value))changeValueHandler;
 
 @property (nonatomic, strong, readonly) ALOSwitchTableViewCell *cell;
 @property (nonatomic, assign) BOOL cellValue;

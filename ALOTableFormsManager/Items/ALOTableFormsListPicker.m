@@ -127,7 +127,8 @@
 -(void)makeSortedValues
 {
     // TODO change on sorted by dictionary position
-    self.sortedValues = [[self.values allValues] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    self.sortedValues = [self.values allValues];
+    //self.sortedValues = [[self.values allValues] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
 #pragma mark - Accessory View

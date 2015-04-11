@@ -11,7 +11,7 @@
 
 @implementation ALOTableFormsSwitch
 
--(id)initWithLabel:(NSString *)label value:(BOOL)value
+- (instancetype)initWithLabel:(NSString *)label value:(BOOL)value
 {
     if (self = [self initWithLabel:label])
     {
@@ -20,7 +20,7 @@
     return self;
 }
 
--(id)initWithLabel:(NSString *)label value:(BOOL)value changeValueHandler:(void (^)(BOOL))changeValueHandler
+- (instancetype)initWithLabel:(NSString *)label value:(BOOL)value changeValueHandler:(void (^)(BOOL))changeValueHandler
 {
     if (self = [self initWithLabel:label value:value])
     {
@@ -29,7 +29,7 @@
     return self;
 }
 
--(void)onSwitchChanged
+- (void)onSwitchChanged
 {
     _cellValue = self.cell.switcher.isOn;
     
@@ -38,8 +38,9 @@
         [self validate];
     }
     
-    if (self.isValide && self.changeValueHandler)
+    if (self.isValide && self.changeValueHandler) {
         self.changeValueHandler(self.cellValue);
+    }
 }
 
 - (ALOSwitchTableViewCell *)formCell
@@ -48,6 +49,7 @@
 }
 
 #pragma mark - Property
+
 - (UITableViewCell *)cell
 {
     if (!_cell && self.section.formManager)
@@ -68,16 +70,17 @@
     return _cell;
 }
 
--(NSString *)reuseId
+- (NSString *)reuseId
 {
-    return @"textFieldTableFormsCell";
+    return NSStringFromClass([ALOSwitchTableViewCell class]);
 }
 
--(void)setCellValue:(BOOL)cellValue
+- (void)setCellValue:(BOOL)cellValue
 {
     _cellValue = cellValue;
-    if (_cell)
+    if (_cell) {
         [self.cell.switcher setOn:cellValue];
+    }
 }
 
 @end

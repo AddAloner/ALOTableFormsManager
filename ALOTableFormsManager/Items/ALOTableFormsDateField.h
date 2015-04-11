@@ -10,8 +10,8 @@
 
 @interface ALOTableFormsDateField : ALOTableFormsTextField
 
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSDate *)value;
--(id)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSDate *)value changeValueHandler:(void(^)(NSDate *value))changeValueHandler;
+- (instancetype)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSDate *)value;
+- (instancetype)initWithLabel:(NSString *)label placeholder:(NSString *)placeholder value:(NSDate *)value changeValueHandler:(void(^)(NSDate *value))changeValueHandler;
 
 @property (nonatomic, copy) NSDate *dateCellValue;
 @property (nonatomic, copy) NSString *cellValue __attribute__((unavailable));
